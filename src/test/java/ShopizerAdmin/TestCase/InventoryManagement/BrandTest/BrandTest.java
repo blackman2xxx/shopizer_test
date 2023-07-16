@@ -13,10 +13,10 @@ public class BrandTest extends Init{
     public ExcelHelpers excel;
     @Test
     public void BrandTest() throws Exception{
-        driver.get("http://localhost:4200/");
+        driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
-        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         brandPage = new BrandPage(driver);
         brandPage.AddBrand(excel.getCellData(1,15),excel.getCellData(1,16),excel.getCellData(1,17),excel.getCellData(1,18));
@@ -27,10 +27,10 @@ public class BrandTest extends Init{
     }
     @Test
     public void BrandTestFail() throws Exception{
-        driver.get("http://localhost:4200/");
+        driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
-        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         brandPage = new BrandPage(driver);
         brandPage.AddBrand(excel.getCellData(1,15),excel.getCellData(1,16),excel.getCellData(1,17),excel.getCellData(1,18));

@@ -12,10 +12,10 @@ public class OptionsTest extends Init{
     public ExcelHelpers excel;
     @Test
     public void OptionsTest() throws Exception{
-        driver.get("http://localhost:4200/");
+        driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
-        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         optionsPage = new OptionsPage(driver);
         optionsPage.AddOption(excel.getCellData(1,19),excel.getCellData(1,20));
@@ -26,10 +26,10 @@ public class OptionsTest extends Init{
     }
     @Test
     public void OptionsTestFail() throws Exception{
-        driver.get("http://localhost:4200/");
+        driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
-        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         optionsPage = new OptionsPage(driver);
         optionsPage.AddOption(excel.getCellData(1,19),excel.getCellData(1,20));

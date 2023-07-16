@@ -13,11 +13,11 @@ public class ValuesTest extends Init{
     public ExcelHelpers excel;
     @Test
     public void ValuesTest() throws Exception{
-        driver.get("http://localhost:4200/");
+        driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
-       //excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
-        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+       //excel.setExcelFile(excelPath,"data");
+        excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         valuesPage = new ValuesPage(driver);
         valuesPage.AddValue(excel.getCellData(1,22),excel.getCellData(1,23),excel.getCellData(1,24));

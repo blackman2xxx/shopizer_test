@@ -13,10 +13,10 @@ public class ProductsGroupsTest extends Init{
     public ExcelHelpers excel;
     @Test
     public void ProductsGroupsTest() throws Exception{
-        driver.get("http://localhost:4200/");
+        driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
-        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         productsGroupsPage = new ProductsGroupsPage(driver);
         productsGroupsPage.AddProductsGroups(excel.getCellData(1,14));
@@ -27,10 +27,10 @@ public class ProductsGroupsTest extends Init{
     }
     @Test
     public void ProductsGroupsTestFail() throws Exception{
-        driver.get("http://localhost:4200/");
+        driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
-        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         productsGroupsPage = new ProductsGroupsPage(driver);
         productsGroupsPage.AddProductsGroups(excel.getCellData(1,14));

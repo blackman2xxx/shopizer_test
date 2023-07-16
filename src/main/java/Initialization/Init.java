@@ -11,6 +11,8 @@ import java.util.concurrent.TimeUnit;
 public class Init {
 
     public WebDriver driver = null;
+    public String urlAdmin = "http://localhost:4200/";
+    public String excelPath = "D:\\H\\ShopizerTestData.xlsx";
     @BeforeMethod
     public void Setup() {
         WebDriverManager.chromedriver().setup();

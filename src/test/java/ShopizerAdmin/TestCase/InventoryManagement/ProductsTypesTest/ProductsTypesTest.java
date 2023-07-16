@@ -12,10 +12,10 @@ public class ProductsTypesTest extends Init{
     public ExcelHelpers excel;
     @Test
     public void ProductsTypesTest() throws Exception{
-        driver.get("http://localhost:4200/");
+        driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
-        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         productTypesPage = new ProductTypesPage(driver);
         productTypesPage.AddProductType(excel.getCellData(1,11),excel.getCellData(1,12));
@@ -26,10 +26,10 @@ public class ProductsTypesTest extends Init{
     }
     @Test
     public void ProductsTypesTestFail() throws Exception{
-        driver.get("http://localhost:4200/");
+        driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
-        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         productTypesPage = new ProductTypesPage(driver);
         productTypesPage.AddProductType(excel.getCellData(1,11),excel.getCellData(1,12));

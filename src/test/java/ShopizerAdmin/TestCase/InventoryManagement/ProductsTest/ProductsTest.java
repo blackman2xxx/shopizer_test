@@ -12,10 +12,10 @@ public class ProductsTest extends Init{
     public ExcelHelpers excel;
     @Test
     public void ProductsTest() throws Exception{
-        driver.get("http://localhost:4200/");
+        driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
-        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         productsPage = new ProductsPage(driver);
 //        productsPage.AddProduct(excel.getCellData(1,25),excel.getCellData(1,26),excel.getCellData(1,27),excel.getCellData(1,28),excel.getCellData(1,29),excel.getCellData(1,30),excel.getCellData(1,31),excel.getCellData(1,32));

@@ -12,10 +12,10 @@ public class CategoryTest extends Init{
     public ExcelHelpers excel;
     @Test
     public void CategoryTest() throws Exception {
-        driver.get("http://localhost:4200/");
+        driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
-        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         categoryPage = new CategoryPage(driver);
         categoryPage.AddCategory(excel.getCellData(1,4), excel.getCellData(1,5), excel.getCellData(1,6), excel.getCellData(1,7));
@@ -27,10 +27,10 @@ public class CategoryTest extends Init{
     }
     @Test
     public void CategoryTestFail() throws Exception {
-        driver.get("http://localhost:4200/");
+        driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
-        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         categoryPage = new CategoryPage(driver);
         categoryPage.AddCategory(excel.getCellData(1,4), excel.getCellData(1,5), excel.getCellData(1,6), excel.getCellData(1,7));

@@ -5,25 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe4a428c-35f3-47fc-b6d7-9e81b0d971bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/InventoryManagementPage/CategoryPage/CategoryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/InventoryManagementPage/ProductOptionsPage/OptionsPage/OptionsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/InventoryManagementPage/ProductOptionsPage/ValuesPage/ValuesPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/LoginPage/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/StoreManagementPage/StoreManagementPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/Category/CategoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductsTypesTest/ProductsTypesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/Login/LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/StoreManagement/StoreManagementTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/UserManagement/UserManagementTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Login/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Initialization/Init.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Initialization/Init.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/BrandTest/BrandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/BrandTest/BrandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/Category/CategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/Category/CategoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductOptionsTest/OptionsTest/OptionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductOptionsTest/OptionsTest/OptionsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductOptionsTest/ValuesTest/ValuesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductOptionsTest/ValuesTest/ValuesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductsGroupsTest/ProductsGroupsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductsGroupsTest/ProductsGroupsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductsTest/ProductsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductsTest/ProductsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductsTypesTest/ProductsTypesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductsTypesTest/ProductsTypesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/Login/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/Login/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/StoreManagement/StoreManagementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/StoreManagement/StoreManagementTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/UserManagement/UserManagementTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/UserManagement/UserManagementTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +60,8 @@
       <recent name="D:\Shopizer_test\shopizertest\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CategoryTest">
-    <configuration name="BrandTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.BrandTest.BrandTest">
+    <configuration name="BrandTest.BrandTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
         <pattern>
@@ -78,7 +71,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.InventoryManagement.BrandTest" />
       <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.InventoryManagement.BrandTest.BrandTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="BrandTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -102,6 +96,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LoginTest.LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="shopizertest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ShopizerAdmin.TestCase.Login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.Login" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.Login.LoginTest" />
+      <option name="METHOD_NAME" value="LoginTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OptionsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
@@ -112,23 +124,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.OptionsTest" />
       <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.OptionsTest.OptionsTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductsGroupsTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shopizertest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ShopizerAdmin.TestCase.InventoryManagement.ProductsGroupsTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.InventoryManagement.ProductsGroupsTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.InventoryManagement.ProductsGroupsTest.ProductsGroupsTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -156,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.BrandTest.BrandTest" />
+        <item itemvalue="TestNG.LoginTest.LoginTest" />
         <item itemvalue="TestNG.CategoryTest" />
         <item itemvalue="TestNG.ProductsTest.ProductsTest" />
         <item itemvalue="TestNG.OptionsTest" />
-        <item itemvalue="TestNG.BrandTest" />
-        <item itemvalue="TestNG.ProductsGroupsTest" />
       </list>
     </recent_temporary>
   </component>
