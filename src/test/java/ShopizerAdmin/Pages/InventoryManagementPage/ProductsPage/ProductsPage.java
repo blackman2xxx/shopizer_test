@@ -47,6 +47,7 @@ public class ProductsPage {
     private By quannamSelect = By.xpath("//li[2]//div[1]");
     private By quanlotnamSelect = By.xpath("//li[3]//div[1]");
     private By phukienSelect = By.xpath("//li[4]//div[1]");
+    private By page2Btn = By.xpath("//button[normalize-space()='2']");
     public ProductsPage(WebDriver driver) {
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
@@ -116,11 +117,100 @@ public class ProductsPage {
         validateHelper.clickElement(categorySelect);
         validateHelper.clickElement(aonamSelect);
     }
-    public void AddProductDataQuan (String id, String order, String manufacturer, String type, String name, String title, String price, String quantity, String anh1, String anh2, String anh3){
+    public void AddProductDataQuan (String id, String order, String manufacturer, String type, String name, String title, String price, String quantity, String anh1, String anh2, String anh3, String editXpath) throws AWTException {
+//        String editXpath = "/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-catalogue[1]/ngx-products[1]/div[1]/div[1]/ngx-products-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr["+"stt"+"]/td[8]/ng2-st-tbody-custom[1]/a[1]/i[1]";
+//        validateHelper.clickElement(inventoryTab);
+//        validateHelper.clickElement(productsTab);
+        validateHelper.clickElement(listTab);
+        validateHelper.clickElement(createBtn);
+        validateHelper.clickElement(visibleCheck);
+        validateHelper.sendText(idInput,id);
+        validateHelper.sendText(orderInput,order);
+        validateHelper.clickElement(manufacturerSelect);
+        validateHelper.sendText(manufacturerSearch,manufacturer);
+        validateHelper.clickElement(manufacturerClick);
+        validateHelper.clickElement(typeSelect);
+        validateHelper.sendText(typeSearch,type);
+        validateHelper.clickElement(typeClick);
+        validateHelper.sendText(nameInput,name);
+        validateHelper.sendText(titleInput,title);
+        validateHelper.sendText(priceInput,price);
+        validateHelper.sendText(quantityInput,quantity);
+        validateHelper.clickElement(submitBtn);
+        validateHelper.clickElement(By.xpath(editXpath));
+        validateHelper.clickElementwithJS(imageTag);
+        validateHelper.uploadFile(imageInsertBtn,anh1);
+        validateHelper.uploadFile(imageInsertBtn,anh2);
+        validateHelper.uploadFile(imageInsertBtn,anh2);
+        validateHelper.uploadFile(imageInsertBtn,anh3);
+        validateHelper.uploadFile(imageInsertBtn,anh3);
+        validateHelper.uploadFile(imageInsertBtn,anh3);
+        validateHelper.clickElement(categoryTag);
+        validateHelper.clickElement(categorySelect);
+        validateHelper.clickElement(quannamSelect);
     }
-    public void AddProductDataQuanlot (String id, String order, String manufacturer, String type, String name, String title, String price, String quantity, String anh1, String anh2, String anh3){
+
+    public void AddProductDataQuanlot (String id, String order, String manufacturer, String type, String name, String title, String price, String quantity, String anh1, String anh2, String anh3, String editXpath) throws AWTException {
+        validateHelper.clickElement(listTab);
+        validateHelper.clickElement(createBtn);
+        validateHelper.clickElement(visibleCheck);
+        validateHelper.sendText(idInput,id);
+        validateHelper.sendText(orderInput,order);
+        validateHelper.clickElement(manufacturerSelect);
+        validateHelper.sendText(manufacturerSearch,manufacturer);
+        validateHelper.clickElement(manufacturerClick);
+        validateHelper.clickElement(typeSelect);
+        validateHelper.sendText(typeSearch,type);
+        validateHelper.clickElement(typeClick);
+        validateHelper.sendText(nameInput,name);
+        validateHelper.sendText(titleInput,title);
+        validateHelper.sendText(priceInput,price);
+        validateHelper.sendText(quantityInput,quantity);
+        validateHelper.clickElement(submitBtn);
+        validateHelper.clickElement(page2Btn);
+        validateHelper.clickElement(By.xpath(editXpath));
+        validateHelper.clickElementwithJS(imageTag);
+        validateHelper.uploadFile(imageInsertBtn,anh1);
+        validateHelper.uploadFile(imageInsertBtn,anh2);
+        validateHelper.uploadFile(imageInsertBtn,anh2);
+        validateHelper.uploadFile(imageInsertBtn,anh3);
+        validateHelper.uploadFile(imageInsertBtn,anh3);
+        validateHelper.uploadFile(imageInsertBtn,anh3);
+        validateHelper.clickElement(categoryTag);
+        validateHelper.clickElement(categorySelect);
+        validateHelper.clickElement(quanlotnamSelect);
     }
-    public void AddProductDataPhukien (String id, String order, String manufacturer, String type, String name, String title, String price, String quantity, String anh1, String anh2, String anh3){
+
+    public void AddProductDataPhukien (String id, String order, String manufacturer, String type, String name, String title, String price, String quantity, String anh1, String editXpath) throws AWTException {
+        validateHelper.clickElement(listTab);
+        validateHelper.clickElement(createBtn);
+        validateHelper.clickElement(visibleCheck);
+        validateHelper.sendText(idInput,id);
+        validateHelper.sendText(orderInput,order);
+        validateHelper.clickElement(manufacturerSelect);
+        validateHelper.sendText(manufacturerSearch,manufacturer);
+        validateHelper.clickElement(manufacturerClick);
+        validateHelper.clickElement(typeSelect);
+        validateHelper.sendText(typeSearch,type);
+        validateHelper.clickElement(typeClick);
+        validateHelper.sendText(nameInput,name);
+        validateHelper.sendText(titleInput,title);
+        validateHelper.sendText(priceInput,price);
+        validateHelper.sendText(quantityInput,quantity);
+        validateHelper.clickElement(submitBtn);
+        validateHelper.clickElement(page2Btn);
+        validateHelper.clickElement(By.xpath(editXpath));
+        validateHelper.clickElementwithJS(imageTag);
+        validateHelper.uploadFile(imageInsertBtn,anh1);
+        validateHelper.uploadFile(imageInsertBtn,anh1);
+        validateHelper.clickElement(categoryTag);
+        validateHelper.clickElement(categorySelect);
+        validateHelper.clickElement(phukienSelect);
+    }
+
+    public void SetUp (){
+        validateHelper.clickElement(inventoryTab);
+        validateHelper.clickElement(productsTab);
     }
 
     public void ListCheck (String id, String name, String quantity, String price){

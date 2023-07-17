@@ -51,7 +51,7 @@
       <recent name="D:\Shopizer_test\shopizertest\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ProductsTest">
+  <component name="RunManager" selected="TestNG.ProductsTest.ProductsTest">
     <configuration name="BrandTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
@@ -103,23 +103,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductsGroupsTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shopizertest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ShopizerAdmin.TestCase.InventoryManagement.ProductsGroupsTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.InventoryManagement.ProductsGroupsTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.InventoryManagement.ProductsGroupsTest.ProductsGroupsTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProductsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
@@ -137,13 +120,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductsTest.ProductsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="shopizertest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ShopizerAdmin.TestCase.InventoryManagement.ProductsTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.InventoryManagement.ProductsTest" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.InventoryManagement.ProductsTest.ProductsTest" />
+      <option name="METHOD_NAME" value="ProductsTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ProductsTest.ProductsTest" />
         <item itemvalue="TestNG.ProductsTest" />
         <item itemvalue="TestNG.OptionsTest" />
         <item itemvalue="TestNG.BrandTest" />
         <item itemvalue="TestNG.CategoryTest" />
-        <item itemvalue="TestNG.ProductsGroupsTest" />
       </list>
     </recent_temporary>
   </component>
