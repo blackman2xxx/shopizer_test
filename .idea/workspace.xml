@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe4a428c-35f3-47fc-b6d7-9e81b0d971bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/AccountPage/AccountPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/AccountTest/AccountTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/CartPage/CartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/CartTest/CartTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Initialization/Init.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Initialization/Init.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/InventoryManagementPage/ProductsPage/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/InventoryManagementPage/ProductsPage/ProductsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductsTest/ProductsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/ProductsTest/ProductsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/LoginPage/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/LoginPage/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/RegisterPage/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/RegisterPage/RegisterPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Login/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Login/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Register/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Register/RegisterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Initialization/ValidateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Initialization/ValidateHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/AccountPage/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/AccountPage/AccountPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +53,7 @@
       <recent name="D:\Shopizer_test\shopizertest\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AccountTest">
+  <component name="RunManager" selected="TestNG.CartTest.AddCartTest">
     <configuration name="AccountTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
@@ -94,34 +89,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CartTest.AddCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ShopizerUser.TestCase.Login.*" />
+          <option name="PATTERN" value="ShopizerUser.TestCase.CartTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.Login" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.Login.LoginTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.CartTest" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.CartTest.CartTest" />
+      <option name="METHOD_NAME" value="AddCartTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductsTest.ProductsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CartTest.LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ShopizerAdmin.TestCase.InventoryManagement.ProductsTest.*" />
+          <option name="PATTERN" value="ShopizerUser.TestCase.CartTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.InventoryManagement.ProductsTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.InventoryManagement.ProductsTest.ProductsTest" />
-      <option name="METHOD_NAME" value="ProductsTest" />
+      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.CartTest" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.CartTest.CartTest" />
+      <option name="METHOD_NAME" value="LoginTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -148,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CartTest.AddCartTest" />
+        <item itemvalue="TestNG.CartTest.LoginTest" />
         <item itemvalue="TestNG.AccountTest" />
         <item itemvalue="TestNG.RegisterTest" />
         <item itemvalue="TestNG.AccountTest.UpdateBillingAddress" />
-        <item itemvalue="TestNG.LoginTest" />
-        <item itemvalue="TestNG.ProductsTest.ProductsTest" />
       </list>
     </recent_temporary>
   </component>

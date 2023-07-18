@@ -78,6 +78,8 @@ public class ValidateHelper {
     }
     public String getText(By by) {
         return driver.findElement(by).getText();}
+    public String getAttribute(By by, String attribute) {
+        return driver.findElement(by).getAttribute(attribute);}
 
     public void sendTextKey (By by, Keys key) {
         driver.findElement(by).sendKeys(key);
