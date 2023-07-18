@@ -10,7 +10,7 @@ public class LoginTest extends Init {
     public ExcelHelpers excel;
     @Test
     public void LoginTest() throws Exception {
-        driver.get("http://localhost/");
+        driver.get(urlUser);
 
         excel = new ExcelHelpers();
         excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");

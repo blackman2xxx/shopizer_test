@@ -4,6 +4,7 @@ import Initialization.ValidateHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 
 public class RegisterPage {
@@ -24,6 +25,7 @@ public class RegisterPage {
     private By stateSelect = By.xpath("//body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/div[7]/select[1]");
     private By submitBtn = By.xpath("(//button[contains(@type,'submit')])[2]");
     private By emailGet = By.xpath("//div[@class='billing-info']//input[@name='email']");
+    private By titleGet = By.xpath("//span[contains(@to,'/my-account')]");
 
     public RegisterPage(WebDriver driver) {
         this.driver = driver;
@@ -45,7 +47,6 @@ public class RegisterPage {
         Select selectState = new Select(driver.findElement(stateSelect));
         selectState.selectByIndex(1);
         validateHelper.clickElement(submitBtn);
-
-        //EmailAddress = validateHelper.getText(emailGet);
+        Assert.assertTrue(driver.findElement(titleGet).isDisplayed());
     }
 }

@@ -118,9 +118,6 @@ public class ProductsPage {
         validateHelper.clickElement(aonamSelect);
     }
     public void AddProductDataQuan (String id, String order, String manufacturer, String type, String name, String title, String price, String quantity, String anh1, String anh2, String anh3, String editXpath) throws AWTException {
-//        String editXpath = "/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-catalogue[1]/ngx-products[1]/div[1]/div[1]/ngx-products-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr["+"stt"+"]/td[8]/ng2-st-tbody-custom[1]/a[1]/i[1]";
-//        validateHelper.clickElement(inventoryTab);
-//        validateHelper.clickElement(productsTab);
         validateHelper.clickElement(listTab);
         validateHelper.clickElement(createBtn);
         validateHelper.clickElement(visibleCheck);

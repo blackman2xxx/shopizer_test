@@ -4,6 +4,7 @@ import Initialization.ValidateHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 
 public class LoginPage {
@@ -16,6 +17,7 @@ public class LoginPage {
     private By usernameInput = By.xpath("//input[contains(@name,'username')]");
     private By passwordInput = By.xpath("//input[contains(@name,'loginPassword')]");
     private By submitBtn = By.xpath("//div[@class='fade tab-pane active show']//button[@type='submit']");
+    private By titleGet = By.xpath("//span[contains(@to,'/my-account')]");
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
@@ -30,8 +32,6 @@ public class LoginPage {
         validateHelper.sendText(passwordInput,password);
 
         validateHelper.clickElement(submitBtn);
-
-
-        //EmailAddress = validateHelper.getText(emailGet);
+        Assert.assertTrue(driver.findElement(titleGet).isDisplayed());
     }
 }

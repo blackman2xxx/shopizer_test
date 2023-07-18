@@ -19,14 +19,14 @@ public class ProductsTest extends Init {
         excel.setExcelFile(excelPath, "data");
         loginPage.SignIn(excel.getCellData(1, 0), excel.getCellData(1, 1));
         productsPage = new ProductsPage(driver);
-//        productsPage.AddProduct(excel.getCellData(1, 25), excel.getCellData(1, 26), excel.getCellData(1, 27), excel.getCellData(1, 28), excel.getCellData(1, 29), excel.getCellData(1, 30), excel.getCellData(1, 31), excel.getCellData(1, 32), excel.getCellData(1, 33), excel.getCellData(1, 34), excel.getCellData(1, 35));
-//        for (int i = 1; i < 10; i++) {
-//            productsPage.AddProductDataAo(excel.getCellData(i + 1, 25), excel.getCellData(i + 1, 26), excel.getCellData(i + 1, 27), excel.getCellData(i + 1, 28), excel.getCellData(i + 1, 29), excel.getCellData(i + 1, 30), excel.getCellData(i + 1, 31), excel.getCellData(i + 1, 32), excel.getCellData(i + 1, 33), excel.getCellData(i + 1, 34), excel.getCellData(i + 1, 35), excel.getCellData(i + 1, 36));
-//        }
-//        for (int i = 10; i < 20; i++) {
-//            productsPage.AddProductDataQuan(excel.getCellData(i + 1, 25), excel.getCellData(i + 1, 26), excel.getCellData(i + 1, 27), excel.getCellData(i + 1, 28), excel.getCellData(i + 1, 29), excel.getCellData(i + 1, 30), excel.getCellData(i + 1, 31), excel.getCellData(i + 1, 32), excel.getCellData(i + 1, 33), excel.getCellData(i + 1, 34), excel.getCellData(i + 1, 35), excel.getCellData(i + 1, 36));
-//        }
-        productsPage.SetUp();
+        productsPage.AddProduct(excel.getCellData(1, 25), excel.getCellData(1, 26), excel.getCellData(1, 27), excel.getCellData(1, 28), excel.getCellData(1, 29), excel.getCellData(1, 30), excel.getCellData(1, 31), excel.getCellData(1, 32), excel.getCellData(1, 33), excel.getCellData(1, 34), excel.getCellData(1, 35));
+        for (int i = 1; i < 10; i++) {
+            productsPage.AddProductDataAo(excel.getCellData(i + 1, 25), excel.getCellData(i + 1, 26), excel.getCellData(i + 1, 27), excel.getCellData(i + 1, 28), excel.getCellData(i + 1, 29), excel.getCellData(i + 1, 30), excel.getCellData(i + 1, 31), excel.getCellData(i + 1, 32), excel.getCellData(i + 1, 33), excel.getCellData(i + 1, 34), excel.getCellData(i + 1, 35), excel.getCellData(i + 1, 36));
+        }
+        for (int i = 10; i < 20; i++) {
+            productsPage.AddProductDataQuan(excel.getCellData(i + 1, 25), excel.getCellData(i + 1, 26), excel.getCellData(i + 1, 27), excel.getCellData(i + 1, 28), excel.getCellData(i + 1, 29), excel.getCellData(i + 1, 30), excel.getCellData(i + 1, 31), excel.getCellData(i + 1, 32), excel.getCellData(i + 1, 33), excel.getCellData(i + 1, 34), excel.getCellData(i + 1, 35), excel.getCellData(i + 1, 36));
+        }
+//        productsPage.SetUp();
                 for (int i = 20; i < 30; i++) {
             productsPage.AddProductDataQuanlot(excel.getCellData(i + 1, 25), excel.getCellData(i + 1, 26), excel.getCellData(i + 1, 27), excel.getCellData(i + 1, 28), excel.getCellData(i + 1, 29), excel.getCellData(i + 1, 30), excel.getCellData(i + 1, 31), excel.getCellData(i + 1, 32), excel.getCellData(i + 1, 33), excel.getCellData(i + 1, 34), excel.getCellData(i + 1, 35), excel.getCellData(i + 1, 36));
         }
