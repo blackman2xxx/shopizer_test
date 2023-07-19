@@ -21,6 +21,8 @@ public class CartPage {
     private By quanlotCheck = By.xpath("//a[contains(@href,'/product/null')][normalize-space()='Combo 03 Quan lot nam Trunk Bamboo S2']");
     private By quanCheck = By.xpath("//a[contains(@href,'/product/null')][normalize-space()='Quan Jeans Clean Denim dang Slimfit S3']");
     private By phukienCheck = By.xpath("//a[contains(@href,'/product/null')][normalize-space()='Tat the thao co dai chong truot']");
+    private By clearCartBtn = By.xpath("//button[normalize-space()='Clear Shopping Cart']");
+    private By phukienRemove = By.xpath("//tbody/tr[4]/td[6]/button[1]");
 
     public CartPage(WebDriver driver) {
         this.driver = driver;
@@ -41,5 +43,19 @@ public class CartPage {
         Assert.assertTrue(driver.findElement(quanCheck).isDisplayed());
         Assert.assertTrue(driver.findElement(quanlotCheck).isDisplayed());
         Assert.assertTrue(driver.findElement(phukienCheck).isDisplayed());
+    }
+    public void RemoveAllProductsFromCart () {
+        validateHelper.clickElement(cartBtn);
+        validateHelper.clickElementwithJS(viewCartBtn);
+        validateHelper.clickElementwithJS(clearCartBtn);
+        driver.get("http://localhost/cart");
+        Assert.assertFalse(driver.findElement(aoCheck).isDisplayed());
+    }
+    public void RemoveProductFromCart(){
+        validateHelper.clickElement(cartBtn);
+        validateHelper.clickElementwithJS(viewCartBtn);
+        validateHelper.clickElementwithJS(phukienRemove);
+        driver.get("http://localhost/cart");
+        Assert.assertFalse(driver.findElement(phukienCheck).isDisplayed());
     }
 }

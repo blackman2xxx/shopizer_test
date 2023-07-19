@@ -22,4 +22,29 @@ public class CartTest extends Init {
         cartPage.AddCart();
 //        Thread.sleep(10000);
     }
+    @Test
+    public void RemoveProductFromCart() throws Exception {
+        driver.get(urlUser);
+
+        excel = new ExcelHelpers();
+        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        loginPage = new LoginPage(driver);
+        loginPage.Login("tu2@gmail.com", excel.getCellData(1,3 ));
+        cartPage = new CartPage(driver);
+        cartPage.RemoveProductFromCart();
+//        Thread.sleep(10000);
+    }
+    @Test
+    public void RemoveAllProductsFromCart() throws Exception {
+        driver.get(urlUser);
+
+        excel = new ExcelHelpers();
+        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        loginPage = new LoginPage(driver);
+        loginPage.Login("tu2@gmail.com", excel.getCellData(1,3 ));
+        cartPage = new CartPage(driver);
+        cartPage.RemoveAllProductsFromCart();
+//        Thread.sleep(10000);
+    }
+
 }
