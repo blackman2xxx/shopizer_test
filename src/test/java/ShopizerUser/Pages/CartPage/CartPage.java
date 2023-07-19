@@ -3,7 +3,11 @@ package ShopizerUser.Pages.CartPage;
 import Initialization.ValidateHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
 
 public class CartPage {
     private WebDriver driver;
@@ -23,6 +27,9 @@ public class CartPage {
     private By phukienCheck = By.xpath("//a[contains(@href,'/product/null')][normalize-space()='Tat the thao co dai chong truot']");
     private By clearCartBtn = By.xpath("//button[normalize-space()='Clear Shopping Cart']");
     private By phukienRemove = By.xpath("//tbody/tr[4]/td[6]/button[1]");
+    private By quanRemove = By.xpath("//li[3]//div[3]//button[1]//i[1]");
+    private By quanlotReduce = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[4]/div[1]/button[1]");
+
 
     public CartPage(WebDriver driver) {
         this.driver = driver;
@@ -45,17 +52,64 @@ public class CartPage {
         Assert.assertTrue(driver.findElement(phukienCheck).isDisplayed());
     }
     public void RemoveAllProductsFromCart () {
+        boolean check;
         validateHelper.clickElement(cartBtn);
         validateHelper.clickElementwithJS(viewCartBtn);
         validateHelper.clickElementwithJS(clearCartBtn);
         driver.get("http://localhost/cart");
-        Assert.assertFalse(driver.findElement(aoCheck).isDisplayed());
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(aoCheck));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertFalse(check);
     }
     public void RemoveProductFromCart(){
+        boolean check;
         validateHelper.clickElement(cartBtn);
         validateHelper.clickElementwithJS(viewCartBtn);
         validateHelper.clickElementwithJS(phukienRemove);
         driver.get("http://localhost/cart");
-        Assert.assertFalse(driver.findElement(phukienCheck).isDisplayed());
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(phukienCheck));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertFalse(check);
+    }
+    public void RemoveProductFromMiniCart(){
+        boolean check;
+        validateHelper.clickElement(cartBtn);
+        validateHelper.clickElementwithJS(quanRemove);
+        driver.get("http://localhost/cart");
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(quanCheck));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertFalse(check);
+    }
+    public void RemoveProductFromCartByQuantity() throws InterruptedException {
+        boolean check;
+        validateHelper.clickElement(cartBtn);
+        validateHelper.clickElementwithJS(viewCartBtn);
+        validateHelper.scrollTo(aoCheck);
+        validateHelper.clickElementwithJS(quanlotReduce);
+        driver.get("http://localhost/cart");
+        driver.get("http://localhost/cart");
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(quanlotCheck));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertFalse(check);
     }
 }

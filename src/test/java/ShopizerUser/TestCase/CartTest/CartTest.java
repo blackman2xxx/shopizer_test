@@ -17,7 +17,7 @@ public class CartTest extends Init {
         excel = new ExcelHelpers();
         excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
         loginPage = new LoginPage(driver);
-        loginPage.Login("tu2@gmail.com", excel.getCellData(1,3 ));
+        loginPage.Login(excel.getCellData(3,2), excel.getCellData(1,3 ));
         cartPage = new CartPage(driver);
         cartPage.AddCart();
 //        Thread.sleep(10000);
@@ -29,9 +29,33 @@ public class CartTest extends Init {
         excel = new ExcelHelpers();
         excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
         loginPage = new LoginPage(driver);
-        loginPage.Login("tu2@gmail.com", excel.getCellData(1,3 ));
+        loginPage.Login(excel.getCellData(3,2), excel.getCellData(1,3 ));
         cartPage = new CartPage(driver);
         cartPage.RemoveProductFromCart();
+//        Thread.sleep(10000);
+    }
+    @Test
+    public void RemoveProductFromMiniCart() throws Exception {
+        driver.get(urlUser);
+
+        excel = new ExcelHelpers();
+        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        loginPage = new LoginPage(driver);
+        loginPage.Login(excel.getCellData(3,2), excel.getCellData(1,3 ));
+        cartPage = new CartPage(driver);
+        cartPage.RemoveProductFromMiniCart();
+//        Thread.sleep(10000);
+    }
+    @Test
+    public void RemoveProductFromCartByQuantity() throws Exception {
+        driver.get(urlUser);
+
+        excel = new ExcelHelpers();
+        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        loginPage = new LoginPage(driver);
+        loginPage.Login(excel.getCellData(3,2), excel.getCellData(1,3 ));
+        cartPage = new CartPage(driver);
+        cartPage.RemoveProductFromCartByQuantity();
 //        Thread.sleep(10000);
     }
     @Test
@@ -41,7 +65,7 @@ public class CartTest extends Init {
         excel = new ExcelHelpers();
         excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
         loginPage = new LoginPage(driver);
-        loginPage.Login("tu2@gmail.com", excel.getCellData(1,3 ));
+        loginPage.Login(excel.getCellData(3,2), excel.getCellData(1,3 ));
         cartPage = new CartPage(driver);
         cartPage.RemoveAllProductsFromCart();
 //        Thread.sleep(10000);

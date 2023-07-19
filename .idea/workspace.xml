@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/CartPage/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/CartPage/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/CartTest/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/CartTest/CartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Register/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Register/RegisterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,17 +52,17 @@
       <recent name="D:\Shopizer_test\shopizertest\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CartTest.RemoveProductFromCart">
-    <configuration name="AccountTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.CartTest.RemoveProductFromCartByQuantity">
+    <configuration name="CartTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ShopizerUser.TestCase.AccountTest.*" />
+          <option name="PATTERN" value="ShopizerUser.TestCase.CartTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.AccountTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.AccountTest.AccountTest" />
+      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.CartTest" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.CartTest.CartTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -87,24 +88,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTest.LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shopizertest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ShopizerUser.TestCase.CartTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.CartTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.CartTest.CartTest" />
-      <option name="METHOD_NAME" value="LoginTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CartTest.RemoveAllProductsFromCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
@@ -123,7 +106,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTest.RemoveProductFromCart" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CartTest.RemoveProductFromCartByQuantity" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
         <pattern>
@@ -133,7 +116,25 @@
       </extension>
       <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.CartTest" />
       <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.CartTest.CartTest" />
-      <option name="METHOD_NAME" value="RemoveProductFromCart" />
+      <option name="METHOD_NAME" value="RemoveProductFromCartByQuantity" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CartTest.RemoveProductFromMiniCart" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="shopizertest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ShopizerUser.TestCase.CartTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.CartTest" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.CartTest.CartTest" />
+      <option name="METHOD_NAME" value="RemoveProductFromMiniCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -143,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.CartTest.RemoveProductFromCart" />
-        <item itemvalue="TestNG.CartTest.RemoveAllProductsFromCart" />
+        <item itemvalue="TestNG.CartTest.RemoveProductFromCartByQuantity" />
         <item itemvalue="TestNG.CartTest.AddCartTest" />
-        <item itemvalue="TestNG.CartTest.LoginTest" />
-        <item itemvalue="TestNG.AccountTest" />
+        <item itemvalue="TestNG.CartTest.RemoveAllProductsFromCart" />
+        <item itemvalue="TestNG.CartTest.RemoveProductFromMiniCart" />
+        <item itemvalue="TestNG.CartTest" />
       </list>
     </recent_temporary>
   </component>
