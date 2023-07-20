@@ -127,7 +127,17 @@ public class ValidateHelper {
 
         if (matcher.find()) {
             String output = input.substring(matcher.start(), matcher.end());
+            return output;
+        } else return null;
+    }
+    public String regexPrice (By by) {
+        Pattern pattern = Pattern.compile("\\d{3},\\d{3}");
+//        Pattern pattern = Pattern.compile("\\1(.+)");
+        String input = driver.findElement(by).getText();
+        Matcher matcher = pattern.matcher(input);
 
+        if (matcher.find()) {
+            String output = input.substring(matcher.start(), matcher.end());
             return output;
         } else return null;
     }

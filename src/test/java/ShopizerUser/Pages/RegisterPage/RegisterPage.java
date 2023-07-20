@@ -31,7 +31,7 @@ public class RegisterPage {
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
     }
-    public void Register(String username, String password) throws InterruptedException {
+    public void Register(String username, String password, String firstname, String lastname) throws InterruptedException {
         validateHelper.clickElement(acceptedBtn);
         validateHelper.clickElement(accountBtn);
         validateHelper.clickElement(registerBtn);
@@ -39,8 +39,8 @@ public class RegisterPage {
         validateHelper.sendText(emailInput,username);
         validateHelper.sendText(passwordInput,password);
         validateHelper.sendText(repeatPasswordInput,password);
-        validateHelper.sendText(firstNameInput,"Tu");
-        validateHelper.sendText(lastNameInput,"Bui");
+        validateHelper.sendText(firstNameInput,firstname);
+        validateHelper.sendText(lastNameInput,lastname);
 
         Select selectCountry = new Select(driver.findElement(countrySelect));
         selectCountry.selectByIndex(1);
