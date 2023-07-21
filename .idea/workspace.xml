@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe4a428c-35f3-47fc-b6d7-9e81b0d971bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/CheckoutPage/CheckoutPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/ProductInforPage/ProductInforPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/ProductInforTest/ProductInforTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Initialization/ValidateHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Initialization/ValidateHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/InventoryManagementPage/CategoryPage/CategoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/InventoryManagementPage/CategoryPage/CategoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/AccountPage/AccountPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/AccountPage/AccountPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/LoginPage/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/LoginPage/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/ProductInforPage/ProductInforPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/ProductInforPage/ProductInforPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/RegisterPage/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/Pages/RegisterPage/RegisterPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Login/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Login/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/AccountTest/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/AccountTest/AccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/ProductInforTest/ProductInforTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/ProductInforTest/ProductInforTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Register/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Register/RegisterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,18 +57,18 @@
       <recent name="D:\Shopizer_test\shopizertest\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ProductInforTest.ProductInfor">
-    <configuration name="CartTest.AddCartTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LoginTest">
+    <configuration name="AccountTest.UpdateBillingAddress" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ShopizerUser.TestCase.CartTest.*" />
+          <option name="PATTERN" value="ShopizerUser.TestCase.AccountTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.CartTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.CartTest.CartTest" />
-      <option name="METHOD_NAME" value="AddCartTest" />
+      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.AccountTest" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.AccountTest.AccountTest" />
+      <option name="METHOD_NAME" value="UpdateBillingAddress" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -75,54 +76,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CartTest.RemoveProductFromCartByQuantity" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ShopizerUser.TestCase.CartTest.*" />
+          <option name="PATTERN" value="ShopizerUser.TestCase.Login.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.CartTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.CartTest.CartTest" />
-      <option name="METHOD_NAME" value="RemoveProductFromCartByQuantity" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CheckoutTest.CheckoutTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shopizertest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ShopizerUser.TestCase.CheckoutTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.CheckoutTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.CheckoutTest.CheckoutTest" />
-      <option name="METHOD_NAME" value="CheckoutTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProductInforTest.ProductInfor" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shopizertest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ShopizerUser.TestCase.ProductInforTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.ProductInforTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.ProductInforTest.ProductInforTest" />
-      <option name="METHOD_NAME" value="ProductInfor" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.Login" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.Login.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -147,13 +111,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RegisterTest.RegisterWithInvalidEmail" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="shopizertest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ShopizerUser.TestCase.Register.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.Register" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.Register.RegisterTest" />
+      <option name="METHOD_NAME" value="RegisterWithInvalidEmail" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegisterTest.RegisterWithSameEmail" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="shopizertest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ShopizerUser.TestCase.Register.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.Register" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.Register.RegisterTest" />
+      <option name="METHOD_NAME" value="RegisterWithSameEmail" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ProductInforTest.ProductInfor" />
-        <item itemvalue="TestNG.CheckoutTest.CheckoutTest" />
+        <item itemvalue="TestNG.LoginTest" />
+        <item itemvalue="TestNG.RegisterTest.RegisterWithSameEmail" />
+        <item itemvalue="TestNG.RegisterTest.RegisterWithInvalidEmail" />
+        <item itemvalue="TestNG.AccountTest.UpdateBillingAddress" />
         <item itemvalue="TestNG.RegisterTest.RegisterTest" />
-        <item itemvalue="TestNG.CartTest.RemoveProductFromCartByQuantity" />
-        <item itemvalue="TestNG.CartTest.AddCartTest" />
       </list>
     </recent_temporary>
   </component>

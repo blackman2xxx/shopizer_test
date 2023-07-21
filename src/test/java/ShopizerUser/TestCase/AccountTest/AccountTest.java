@@ -17,8 +17,27 @@ public class AccountTest extends Init{
         excel = new ExcelHelpers();
         excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
         loginPage = new LoginPage(driver);
-        loginPage.Login(excel.getCellData(1,2), excel.getCellData(1,3 ));
         accountPage = new AccountPage(driver);
+        loginPage.Login(excel.getCellData(1,2), excel.getCellData(1,3 ));
         accountPage.UpdateBillingAddress(excel.getCellData(1,39),excel.getCellData(1,40),excel.getCellData(1,41),excel.getCellData(1,42),excel.getCellData(1,43),excel.getCellData(1,44),excel.getCellData(1,45));
+        accountPage.LogOut();
+        driver.get(urlUser);
+        loginPage.LoginWithoutAccept(excel.getCellData(2,2), excel.getCellData(1,3 ));
+        accountPage.UpdateBillingAddress(excel.getCellData(1,39),excel.getCellData(1,40),excel.getCellData(1,41),excel.getCellData(1,42),excel.getCellData(1,43),excel.getCellData(1,44),excel.getCellData(1,45));
+        accountPage.LogOut();
+        driver.get(urlUser);
+        loginPage.LoginWithoutAccept(excel.getCellData(3,2), excel.getCellData(1,3 ));
+        accountPage.UpdateBillingAddress(excel.getCellData(1,39),excel.getCellData(1,40),excel.getCellData(1,41),excel.getCellData(1,42),excel.getCellData(1,43),excel.getCellData(1,44),excel.getCellData(1,45));
+        accountPage.LogOut();
+        driver.get(urlUser);
+        loginPage.LoginWithoutAccept(excel.getCellData(4,2), excel.getCellData(1,3 ));
+        accountPage.UpdateBillingAddress(excel.getCellData(1,39),excel.getCellData(1,40),excel.getCellData(1,41),excel.getCellData(1,42),excel.getCellData(1,43),excel.getCellData(1,44),excel.getCellData(1,45));
+        accountPage.LogOut();
+        driver.get(urlUser);
+        loginPage.LoginWithoutAccept(excel.getCellData(5,2), excel.getCellData(1,3 ));
+        accountPage.UpdateBillingAddress(excel.getCellData(1,39),excel.getCellData(1,40),excel.getCellData(1,41),excel.getCellData(1,42),excel.getCellData(1,43),excel.getCellData(1,44),excel.getCellData(1,45));
+        accountPage.LogOut();
+        driver.get(urlUser);
     }
+
 }

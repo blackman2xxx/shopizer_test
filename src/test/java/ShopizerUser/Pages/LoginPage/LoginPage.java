@@ -34,4 +34,14 @@ public class LoginPage {
         validateHelper.clickElement(submitBtn);
         Assert.assertTrue(driver.findElement(titleGet).isDisplayed());
     }
+    public void LoginWithoutAccept(String username, String password) throws InterruptedException {
+        validateHelper.clickElement(accountBtn);
+        validateHelper.clickElement(loginBtn);
+
+        validateHelper.sendText(usernameInput,username);
+        validateHelper.sendText(passwordInput,password);
+
+        validateHelper.clickElement(submitBtn);
+        Assert.assertTrue(driver.findElement(titleGet).isDisplayed());
+    }
 }

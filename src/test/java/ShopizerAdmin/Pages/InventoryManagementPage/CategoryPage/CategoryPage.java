@@ -37,7 +37,7 @@ public class CategoryPage {
         validateHelper.sendText(orderInput,order);
         validateHelper.sendText(titleInput,title);
         validateHelper.sendText(nameInput,name);
-        validateHelper.clickElement(submitBtn);
+        validateHelper.clickElementwithJS(submitBtn);
     }
 
     public void AddCategoryData (String code, String order, String title, String name){
@@ -47,7 +47,7 @@ public class CategoryPage {
         validateHelper.sendText(orderInput,order);
         validateHelper.sendText(titleInput,title);
         validateHelper.sendText(nameInput,name);
-        validateHelper.clickElement(submitBtn);
+        validateHelper.clickElementwithJS(submitBtn);
     }
 
     public void ListCheck (String name, String code){

@@ -21,5 +21,17 @@ public class ProductInforTest extends Init {
         productInforPage = new ProductInforPage(driver);
         productInforPage.ProductInfor(excel.getCellData(1,30), excel.getCellData(1,31), excel.getCellData(1,25), excel.getCellData(1,7));
     }
+    @Test
+    public void AddReview() throws Exception {
+        driver.get(urlUser);
+
+        excel = new ExcelHelpers();
+        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        loginPage = new LoginPage(driver);
+        loginPage.Login(excel.getCellData(1,2), excel.getCellData(1,3 ));
+        productInforPage = new ProductInforPage(driver);
+        productInforPage.AddReview();
+        Thread.sleep(20000);
+    }
 }
 

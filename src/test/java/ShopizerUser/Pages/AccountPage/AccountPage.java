@@ -12,7 +12,8 @@ public class AccountPage {
     private WebDriver driver;
     private ValidateHelper validateHelper;
     public String EmailAddress;
-    private By billingAddressTab = By.xpath("//body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]/h3[1]");
+//    private By billingAddressTab = By.xpath("//body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]/h3[1]");
+    private By billingAddressTab = By.xpath("//div[2]//div[1]//button[1]//h3[1]");
     private By companyNameInput = By.xpath("//input[contains(@name,'company')]");
     private By streetAddressInput = By.id("autocomplete");
     private By countrySelect = By.xpath("//body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/div[1]/div[5]/div[1]/select[1]");
@@ -26,6 +27,8 @@ public class AccountPage {
     private By companyGet = By.xpath("//input[@name='company']");
     private By streetGet = By.xpath("//input[@id='autocomplete']");
     private By cityGet = By.xpath("//input[@name='city']");
+    private By accountBtn = By.xpath("//button[@class='account-setting-active']");
+    private By logOutBtn = By.xpath("//a[normalize-space()='Logout']");
 
 
     public AccountPage(WebDriver driver) {
@@ -45,8 +48,8 @@ public class AccountPage {
         validateHelper.sendText(postalCodeInput,postalcode);
         validateHelper.sendText(phoneInput,phone);
         validateHelper.clickElement(submitBtn);
-        driver.navigate().refresh();
-        validateHelper.clickElement(billingAddressTab);
+//        driver.navigate().refresh();
+//        validateHelper.clickElement(billingAddressTab);
         checkData(company,street,country,state,city,postalcode,phone);
 
     }
@@ -59,5 +62,10 @@ public class AccountPage {
         Assert.assertEquals(city,validateHelper.getAttribute(cityGet,"value"));
         Assert.assertEquals(postalcode,validateHelper.getAttribute(postalCodeInput,"value"));
         Assert.assertEquals(phone,validateHelper.getAttribute(phoneInput,"value"));
+    }
+    public void LogOut(){
+        validateHelper.clickElement(accountBtn);
+        validateHelper.clickElement(logOutBtn);
+        driver.navigate().refresh();
     }
 }

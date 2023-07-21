@@ -15,6 +15,8 @@ public class ProductInforPage {
     private By priceGet = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[1]/span[1]");
     private By idGet = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[6]/ul[1]/li[1]/a[1]");
     private By categoryGet = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/div[7]/ul[1]/li[1]/a[1]");
+    private By reviewTab = By.xpath("/html[1]/body[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[2]");
+    private By fourstarsClick = By.xpath("//div[@class='description-review-area pb-90']//div[4]//*[name()='svg']//*[name()='path' and contains(@class,'star')]");
 
 
     public ProductInforPage(WebDriver driver) {
@@ -28,5 +30,11 @@ public class ProductInforPage {
         Assert.assertEquals(price,validateHelper.regexPrice(priceGet).replaceAll(",",""));
         Assert.assertEquals(id,validateHelper.getText(idGet));
         Assert.assertEquals(category,validateHelper.getText(categoryGet));
+    }
+    public void AddReview(){
+        validateHelper.clickElement(aonamTab);
+        validateHelper.clickElement(firstProductInfor);
+        validateHelper.clickElementwithJS(reviewTab);
+        validateHelper.clickElementwithJS(fourstarsClick);
     }
 }

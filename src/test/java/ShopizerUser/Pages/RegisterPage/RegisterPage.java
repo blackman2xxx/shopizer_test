@@ -26,6 +26,7 @@ public class RegisterPage {
     private By submitBtn = By.xpath("(//button[contains(@type,'submit')])[2]");
     private By emailGet = By.xpath("//div[@class='billing-info']//input[@name='email']");
     private By titleGet = By.xpath("//span[contains(@to,'/my-account')]");
+    private By logOutBtn = By.xpath("//a[normalize-space()='Logout']");
 
     public RegisterPage(WebDriver driver) {
         this.driver = driver;
@@ -49,4 +50,63 @@ public class RegisterPage {
         validateHelper.clickElement(submitBtn);
         Assert.assertTrue(driver.findElement(titleGet).isDisplayed());
     }
+    public void LogOut(){
+        validateHelper.clickElement(accountBtn);
+        validateHelper.clickElement(logOutBtn);
+        driver.navigate().refresh();
+    }
+    public void RegisterAddUser(String username, String password, String firstname, String lastname) throws InterruptedException {
+        validateHelper.clickElement(accountBtn);
+        validateHelper.clickElement(registerBtn);
+
+        validateHelper.sendText(emailInput,username);
+        validateHelper.sendText(passwordInput,password);
+        validateHelper.sendText(repeatPasswordInput,password);
+        validateHelper.sendText(firstNameInput,firstname);
+        validateHelper.sendText(lastNameInput,lastname);
+
+        Select selectCountry = new Select(driver.findElement(countrySelect));
+        selectCountry.selectByIndex(1);
+        Select selectState = new Select(driver.findElement(stateSelect));
+        selectState.selectByIndex(1);
+        validateHelper.clickElement(submitBtn);
+        Assert.assertTrue(driver.findElement(titleGet).isDisplayed());
+    }
+    public void RegisterWithInvalidEmail(String username, String password, String firstname, String lastname) throws InterruptedException {
+        validateHelper.clickElement(acceptedBtn);
+        validateHelper.clickElement(accountBtn);
+        validateHelper.clickElement(registerBtn);
+
+        validateHelper.sendText(emailInput,"");
+        validateHelper.sendText(passwordInput,password);
+        validateHelper.sendText(repeatPasswordInput,password);
+        validateHelper.sendText(firstNameInput,firstname);
+        validateHelper.sendText(lastNameInput,lastname);
+
+        Select selectCountry = new Select(driver.findElement(countrySelect));
+        selectCountry.selectByIndex(1);
+        Select selectState = new Select(driver.findElement(stateSelect));
+        selectState.selectByIndex(1);
+        validateHelper.clickElement(submitBtn);
+        Assert.assertTrue(driver.findElement(submitBtn).isDisplayed());
+    }
+    public void RegisterWithSameEmail(String username, String password, String firstname, String lastname) throws InterruptedException {
+        validateHelper.clickElement(acceptedBtn);
+        validateHelper.clickElement(accountBtn);
+        validateHelper.clickElement(registerBtn);
+
+        validateHelper.sendText(emailInput,username);
+        validateHelper.sendText(passwordInput,password);
+        validateHelper.sendText(repeatPasswordInput,password);
+        validateHelper.sendText(firstNameInput,firstname);
+        validateHelper.sendText(lastNameInput,lastname);
+
+        Select selectCountry = new Select(driver.findElement(countrySelect));
+        selectCountry.selectByIndex(1);
+        Select selectState = new Select(driver.findElement(stateSelect));
+        selectState.selectByIndex(1);
+        validateHelper.clickElement(submitBtn);
+        Assert.assertTrue(driver.findElement(submitBtn).isDisplayed());
+    }
+
 }
