@@ -30,8 +30,8 @@ public class ProductInforTest extends Init {
         loginPage = new LoginPage(driver);
         loginPage.Login(excel.getCellData(1,2), excel.getCellData(1,3 ));
         productInforPage = new ProductInforPage(driver);
-        productInforPage.AddReview();
-        Thread.sleep(20000);
+        productInforPage.AddReview("Áo đẹp");
+
     }
 }
 

@@ -27,6 +27,7 @@ public class RegisterPage {
     private By emailGet = By.xpath("//div[@class='billing-info']//input[@name='email']");
     private By titleGet = By.xpath("//span[contains(@to,'/my-account')]");
     private By logOutBtn = By.xpath("//a[normalize-space()='Logout']");
+    private By invalidEmailAlert = By.xpath("//p[normalize-space()='Please entered the valid email id']");
 
     public RegisterPage(WebDriver driver) {
         this.driver = driver;
@@ -77,18 +78,9 @@ public class RegisterPage {
         validateHelper.clickElement(accountBtn);
         validateHelper.clickElement(registerBtn);
 
-        validateHelper.sendText(emailInput,"");
+        validateHelper.sendText(emailInput,"abc");
         validateHelper.sendText(passwordInput,password);
-        validateHelper.sendText(repeatPasswordInput,password);
-        validateHelper.sendText(firstNameInput,firstname);
-        validateHelper.sendText(lastNameInput,lastname);
-
-        Select selectCountry = new Select(driver.findElement(countrySelect));
-        selectCountry.selectByIndex(1);
-        Select selectState = new Select(driver.findElement(stateSelect));
-        selectState.selectByIndex(1);
-        validateHelper.clickElement(submitBtn);
-        Assert.assertTrue(driver.findElement(submitBtn).isDisplayed());
+        Assert.assertTrue(driver.findElement(invalidEmailAlert).isDisplayed());
     }
     public void RegisterWithSameEmail(String username, String password, String firstname, String lastname) throws InterruptedException {
         validateHelper.clickElement(acceptedBtn);

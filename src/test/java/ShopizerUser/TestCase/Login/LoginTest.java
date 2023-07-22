@@ -17,4 +17,22 @@ public class LoginTest extends Init {
         loginPage = new LoginPage(driver);
         loginPage.Login(excel.getCellData(1,2), excel.getCellData(1,3 ));
     }
+    @Test
+    public void LoginWithInvalidEmail() throws Exception {
+        driver.get(urlUser);
+
+        excel = new ExcelHelpers();
+        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        loginPage = new LoginPage(driver);
+        loginPage.LoginWithInvalidEmail(excel.getCellData(1,2), excel.getCellData(1,3 ));
+    }
+    @Test
+    public void LoginWithWrongPassword() throws Exception {
+        driver.get(urlUser);
+
+        excel = new ExcelHelpers();
+        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        loginPage = new LoginPage(driver);
+        loginPage.LoginWithWrongPassword(excel.getCellData(1,2), excel.getCellData(1,3 ));
+    }
 }
