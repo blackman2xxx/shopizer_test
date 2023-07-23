@@ -9,6 +9,14 @@ public class RegisterTest extends Init {
     public RegisterPage registerPage;
     public ExcelHelpers excel;
     @Test
+    public void RegisterWithWrongPassword() throws Exception {
+        driver.get(urlUser);
+        excel = new ExcelHelpers();
+        excel.setExcelFile("D:\\H\\ShopizerTestData.xlsx","data");
+        registerPage = new RegisterPage(driver);
+        registerPage.RegisterWithWrongPassword(excel.getCellData(1,2), excel.getCellData(1,3), excel.getCellData(1,46), excel.getCellData(1,47));
+    }
+    @Test
     public void RegisterTest() throws Exception {
         driver.get(urlUser);
 

@@ -4,6 +4,9 @@ import Initialization.ValidateHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class StoreManagementPage {
@@ -25,30 +28,60 @@ public class StoreManagementPage {
     private By getCodeList = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-store-management[1]/div[1]/div[1]/ngx-stores-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[2]/td[2]");
     private By getStoreNameList = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-store-management[1]/div[1]/div[1]/ngx-stores-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[2]/td[4]");
     private By getStoreEmailList = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-store-management[1]/div[1]/div[1]/ngx-stores-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[2]/td[5]");
+    private By storeList = By.xpath("//span[normalize-space()='Stores list']");
+    private By editBtn = By.xpath("//body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-store-management[1]/div[1]/div[1]/ngx-stores-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[2]/td[6]/ng2-st-tbody-custom[1]/a[1]/i[1]");
+    private By removeBtn = By.xpath("//body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-store-management[1]/div[1]/div[1]/ngx-stores-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[2]/td[6]/ng2-st-tbody-custom[1]/a[2]/i[1]");
+    private By removeConfirm = By.xpath("//button[normalize-space()='Ok']");
+
     public StoreManagementPage(WebDriver driver) {
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
         js = (JavascriptExecutor)driver;
     }
-    public void AddStore () {
+    public void AddStore (String name, String id, String phone, String email, String address, String city, String postalCode) {
         validateHelper.clickElement(storeManagementTab);
         validateHelper.clickElement(addStoreTab);
-        validateHelper.sendText(storeNameInput,"Coolmate");
-        validateHelper.sendText(uniqueStoreCodeInput,"1234");
-        validateHelper.sendText(storePhoneInput,"0987654321");
-        validateHelper.sendText(storeEmailInput,"cm@gmail.com");
+        validateHelper.sendText(storeNameInput,name);
+        validateHelper.sendText(uniqueStoreCodeInput,id);
+        validateHelper.sendText(storePhoneInput,phone);
+        validateHelper.sendText(storeEmailInput,email);
         validateHelper.scrollTo(storePhoneInput);
 
-        validateHelper.sendText(storeAddressInput,"Cau Giay");
-        validateHelper.sendText(storeCityInput,"Ha Noi");
-        validateHelper.sendText(storePostalCodeInput,"HN001");
+        validateHelper.sendText(storeAddressInput,address);
+        validateHelper.sendText(storeCityInput,city);
+        validateHelper.sendText(storePostalCodeInput,postalCode);
         validateHelper.clickElement(supportLanguageInput);
 
         validateHelper.clickElementwithJS(saveBtn);
+        ListCheck(id,name,email);
     }
-    public void ListCheck () {
-        Assert.assertEquals("1234",validateHelper.getText(getCodeList));
-        Assert.assertEquals("Coolmate",validateHelper.getText(getStoreNameList));
-        Assert.assertEquals("cm@gmail.com",validateHelper.getText(getStoreEmailList));
+    public void ListCheck (String id, String name, String email) {
+        Assert.assertEquals(id,validateHelper.getText(getCodeList));
+        Assert.assertEquals(name,validateHelper.getText(getStoreNameList));
+        Assert.assertEquals(email,validateHelper.getText(getStoreEmailList));
+    }
+    public void EditStore (String id, String name, String email){
+        validateHelper.clickElement(storeManagementTab);
+        validateHelper.clickElement(storeList);
+        validateHelper.clickElement(editBtn);
+        validateHelper.sendText(storeEmailInput,email);
+        validateHelper.clickElementwithJS(saveBtn);
+        ListCheck(id,name,email);
+    }
+    public void RemoveStore () throws InterruptedException {
+        boolean check;
+        validateHelper.clickElement(storeManagementTab);
+        validateHelper.clickElement(storeList);
+        validateHelper.clickElement(removeBtn);
+        validateHelper.clickElement(removeConfirm);
+        Thread.sleep(2000);
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(removeBtn));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertFalse(check);
     }
 }

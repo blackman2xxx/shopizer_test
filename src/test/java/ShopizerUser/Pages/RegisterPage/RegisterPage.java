@@ -28,6 +28,7 @@ public class RegisterPage {
     private By titleGet = By.xpath("//span[contains(@to,'/my-account')]");
     private By logOutBtn = By.xpath("//a[normalize-space()='Logout']");
     private By invalidEmailAlert = By.xpath("//p[normalize-space()='Please entered the valid email id']");
+    private By wrongPasswordAlert = By.xpath("/html[1]/body[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[1]/form[1]/div[3]/p[1]");
 
     public RegisterPage(WebDriver driver) {
         this.driver = driver;
@@ -100,5 +101,14 @@ public class RegisterPage {
         validateHelper.clickElement(submitBtn);
         Assert.assertTrue(driver.findElement(submitBtn).isDisplayed());
     }
+    public void RegisterWithWrongPassword(String username, String password, String firstname, String lastname) throws InterruptedException {
+        validateHelper.clickElement(acceptedBtn);
+        validateHelper.clickElement(accountBtn);
+        validateHelper.clickElement(registerBtn);
 
+        validateHelper.sendText(emailInput,username);
+        validateHelper.sendText(passwordInput,password);
+        validateHelper.sendText(repeatPasswordInput,"123456aA@");
+        Assert.assertTrue(driver.findElement(wrongPasswordAlert).isDisplayed());
+    }
 }

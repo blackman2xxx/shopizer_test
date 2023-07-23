@@ -11,7 +11,7 @@ public class StoreManagementTest extends Init{
     public LoginPage loginPage;
     public StoreManagementPage storeManagementPage;
     public ExcelHelpers excel;
-    @Test
+    @Test (priority = 1)
     public void StoreTest() throws Exception {
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
@@ -19,7 +19,26 @@ public class StoreManagementTest extends Init{
         excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         storeManagementPage = new StoreManagementPage(driver);
-        storeManagementPage.AddStore();
-        storeManagementPage.ListCheck();
+        storeManagementPage.AddStore(excel.getCellData(1,52),excel.getCellData(1,53),excel.getCellData(1,54),excel.getCellData(1,55),excel.getCellData(1,56),excel.getCellData(1,57),excel.getCellData(1,58));
+    }
+    @Test (priority = 2)
+    public void EditStore() throws Exception {
+        driver.get(urlAdmin);
+        loginPage = new LoginPage(driver);
+        excel = new ExcelHelpers();
+        excel.setExcelFile(excelPath,"data");
+        loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
+        storeManagementPage = new StoreManagementPage(driver);
+        storeManagementPage.EditStore(excel.getCellData(1,53),excel.getCellData(1,52),excel.getCellData(1,59));
+    }
+    @Test (priority = 3)
+    public void RemoveStore() throws Exception {
+        driver.get(urlAdmin);
+        loginPage = new LoginPage(driver);
+        excel = new ExcelHelpers();
+        excel.setExcelFile(excelPath,"data");
+        loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
+        storeManagementPage = new StoreManagementPage(driver);
+        storeManagementPage.RemoveStore();
     }
 }
