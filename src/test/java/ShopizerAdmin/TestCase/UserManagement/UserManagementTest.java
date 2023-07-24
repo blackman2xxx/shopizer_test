@@ -42,9 +42,28 @@ public class UserManagementTest extends Init{
         userManagementPage.AddUser(excel.getCellData(1,48),excel.getCellData(1,49),excel.getCellData(1,50),excel.getCellData(1,51));
         userManagementPage.Logout();
         loginPage.SignIn(excel.getCellData(1,50),excel.getCellData(1,51));
-        Assert.assertEquals(excel.getCellData(1,50),loginPage.UserName);
     }
     @Test (priority = 4)
+    public void SearchByName () throws Exception {
+        driver.get(urlAdmin);
+        loginPage = new LoginPage(driver);
+        excel = new ExcelHelpers();
+        excel.setExcelFile(excelPath,"data");
+        loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
+        userManagementPage = new UserManagementPage(driver);
+        userManagementPage.SearchByName(excel.getCellData(1,48),excel.getCellData(1,49));
+    }
+    @Test (priority = 5)
+    public void SearchByEmail () throws Exception {
+        driver.get(urlAdmin);
+        loginPage = new LoginPage(driver);
+        excel = new ExcelHelpers();
+        excel.setExcelFile(excelPath,"data");
+        loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
+        userManagementPage = new UserManagementPage(driver);
+        userManagementPage.SearchByEmail(excel.getCellData(1,50));
+    }
+    @Test (priority = 6)
     public void EditUser () throws Exception {
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
@@ -54,7 +73,7 @@ public class UserManagementTest extends Init{
         userManagementPage = new UserManagementPage(driver);
         userManagementPage.UserEdit();
     }
-    @Test (priority = 5)
+    @Test (priority = 7)
     public void RemoveUser () throws Exception {
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);

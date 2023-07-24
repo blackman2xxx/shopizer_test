@@ -1,10 +1,7 @@
 package ShopizerAdmin.Pages.UserManagementPage;
 
 import Initialization.ValidateHelper;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -44,7 +41,10 @@ public class UserManagementPage {
     private By userList = By.xpath("//span[normalize-space()='Users list']");
     private By editBtn = By.xpath("//body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-user-management[1]/div[1]/div[1]/ngx-users-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[2]/td[5]/ng2-st-tbody-custom[1]/a[1]/i[1]");
     private By deleteBtn = By.xpath("//button[normalize-space()='Remove']");
-
+    private By nameSearch = By.xpath("//input[@placeholder='Name']");
+    private By nameSearchCheck = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-user-management[1]/div[1]/div[1]/ngx-users-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[1]/td[2]/ng2-smart-table-cell[1]/table-cell-view-mode[1]/div[1]/div[1]");
+    private By emailSearch = By.xpath("//input[@placeholder='Email']");
+    private By emailSearchCheck = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-user-management[1]/div[1]/div[1]/ngx-users-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[1]/td[3]/ng2-smart-table-cell[1]/table-cell-view-mode[1]/div[1]/div[1]");
     public UserManagementPage(WebDriver driver) {
         this.driver = driver;
         validateHelper = new ValidateHelper(driver);
@@ -77,6 +77,41 @@ public class UserManagementPage {
     public void ListCheck (String name, String email) {
         Assert.assertEquals( name, validateHelper.getAttribute(getNameList,"innerText"));
         Assert.assertEquals(email, validateHelper.getText(getEmailList));
+    }
+    public void SearchByName(String firstname, String lastname) throws InterruptedException {
+        boolean check;
+        String fullname = firstname + " " + lastname;
+        validateHelper.clickElement(userManagementTab);
+        validateHelper.clickElement(userList);
+        validateHelper.sendText(nameSearch,fullname);
+        validateHelper.sendTextKey(nameSearch, Keys.ENTER);
+        Thread.sleep(2000);
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(nameSearchCheck));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertTrue(check);
+        Assert.assertEquals(fullname,validateHelper.getText(nameSearchCheck));
+    }
+    public void SearchByEmail(String email) throws InterruptedException {
+        boolean check;
+        validateHelper.clickElement(userManagementTab);
+        validateHelper.clickElement(userList);
+        validateHelper.sendText(emailSearch,email);
+        validateHelper.sendTextKey(nameSearch, Keys.ENTER);
+        Thread.sleep(2000);
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(emailSearchCheck));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertTrue(check);
+        Assert.assertEquals(email,validateHelper.getText(emailSearchCheck));
     }
     public void Logout() {
         validateHelper.clickElementwithJS(userBtn);

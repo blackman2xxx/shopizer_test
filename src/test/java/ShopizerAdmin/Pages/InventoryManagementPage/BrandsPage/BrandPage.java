@@ -4,6 +4,9 @@ import Initialization.ValidateHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class BrandPage {
@@ -20,6 +23,11 @@ public class BrandPage {
     private By submitBtn = By.xpath("//button[normalize-space()='Save']");
     private By nameGet = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-catalogue[1]/ngx-brands[1]/div[1]/div[1]/ngx-brands-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[1]/td[2]/ng2-smart-table-cell[1]/table-cell-view-mode[1]/div[1]/div[1]");
     private By codeGet = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-catalogue[1]/ngx-brands[1]/div[1]/div[1]/ngx-brands-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[1]/td[3]/ng2-smart-table-cell[1]/table-cell-view-mode[1]/div[1]/div[1]");
+    private By duplicateIDAlert = By.xpath("//span[@class='err-message ng-star-inserted']");
+    private By editBtn = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-catalogue[1]/ngx-brands[1]/div[1]/div[1]/ngx-brands-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[11]/td[4]/ng2-st-tbody-custom[1]/a[1]/i[1]");
+    private By removeBtn = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-catalogue[1]/ngx-brands[1]/div[1]/div[1]/ngx-brands-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[11]/td[4]/ng2-st-tbody-custom[1]/a[2]/i[1]");
+    private By removeConfirm = By.xpath("//button[contains(text(),'Ok')]");
+    private By brandList = By.xpath("//span[normalize-space()='List of brands']");
 
     public BrandPage(WebDriver driver) {
         this.driver = driver;
@@ -36,6 +44,7 @@ public class BrandPage {
         validateHelper.sendText(nameInput,name);
         validateHelper.sendText(titleInput,title);
         validateHelper.clickElementwithJS(submitBtn);
+        ListCheck(name,code);
     }
     public void AddBrandData (String code, String order, String name, String title){
         validateHelper.clickElement(createBtn);
@@ -48,5 +57,52 @@ public class BrandPage {
     public void ListCheck (String name, String code){
         Assert.assertEquals(name,validateHelper.getText(nameGet));
         Assert.assertEquals(code,validateHelper.getText(codeGet));
+    }
+    public void AddBrandSameID (String code, String order, String name, String title){
+        boolean check;
+        validateHelper.clickElement(inventoryTab);
+        validateHelper.clickElement(brandTab);
+        validateHelper.clickElement(createBtn);
+        validateHelper.sendText(codeInput,code);
+        validateHelper.sendText(orderInput,order);
+        Assert.assertTrue(driver.findElement(duplicateIDAlert).isDisplayed());
+        validateHelper.sendText(nameInput,name);
+        validateHelper.sendText(titleInput,title);
+        validateHelper.clickElementwithJS(submitBtn);
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(nameGet));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertFalse(check);
+    }
+    public void EditBrand(String editnamedata){
+        validateHelper.clickElement(inventoryTab);
+        validateHelper.clickElement(brandTab);
+        validateHelper.clickElement(brandList);
+        validateHelper.clickElementwithJS(editBtn);
+        validateHelper.sendText(nameInput,editnamedata);
+        validateHelper.clickElement(submitBtn);
+        driver.navigate().refresh();
+        Assert.assertEquals(editnamedata,validateHelper.getAttribute(nameInput,"value"));
+    }
+    public void RemoveBrand() throws InterruptedException {
+        boolean check;
+        validateHelper.clickElement(inventoryTab);
+        validateHelper.clickElement(brandTab);
+        validateHelper.clickElement(brandList);
+        validateHelper.clickElement(removeBtn);
+        validateHelper.clickElement(removeConfirm);
+        Thread.sleep(2000);
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(removeBtn));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertFalse(check);
     }
 }
