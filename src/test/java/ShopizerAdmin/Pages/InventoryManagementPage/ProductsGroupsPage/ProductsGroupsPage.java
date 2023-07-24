@@ -1,10 +1,7 @@
 package ShopizerAdmin.Pages.InventoryManagementPage.ProductsGroupsPage;
 
 import Initialization.ValidateHelper;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -29,6 +26,7 @@ public class ProductsGroupsPage {
     private By product2Check = By.xpath("//span[contains(text(),'Ao thun Gym Powerfit')]");
     private By updateBtn = By.xpath("//button[contains(text(),'Update')]");
     private By removeConfirm = By.xpath("//button[normalize-space()='Ok']");
+    private By codeSearch = By.xpath("//input[@placeholder='Code']");
 
     public ProductsGroupsPage(WebDriver driver) {
         this.driver = driver;
@@ -53,6 +51,24 @@ public class ProductsGroupsPage {
     }
     public void ListCheck (String code){
 //        Assert.assertEquals(name,validateHelper.getText(nameGet));
+        Assert.assertEquals(code,validateHelper.getText(codeGet));
+    }
+    public void SearchByCode (String code) throws InterruptedException {
+        boolean check;
+        validateHelper.clickElement(inventoryTab);
+        validateHelper.clickElement(productsGroupsTab);
+        validateHelper.clickElement(listTab);
+        validateHelper.sendText(codeSearch,code);
+        validateHelper.sendTextKey(codeSearch, Keys.ENTER);
+        Thread.sleep(2000);
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(codeGet));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertTrue(check);
         Assert.assertEquals(code,validateHelper.getText(codeGet));
     }
     public void AddProductsGroupsSameID (String code){

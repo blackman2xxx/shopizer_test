@@ -24,7 +24,17 @@ public class ProductsTypesTest extends Init{
         }
     }
     @Test (priority = 2)
-    public void ProductsTypesTestFail() throws Exception{
+    public void SearchByCode() throws Exception{
+        driver.get(urlAdmin);
+        loginPage = new LoginPage(driver);
+        excel = new ExcelHelpers();
+        excel.setExcelFile(excelPath,"data");
+        loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
+        productTypesPage = new ProductTypesPage(driver);
+        productTypesPage.SearchByCode(excel.getCellData(2,11));
+    }
+    @Test (priority = 3)
+    public void ProductsTypesSameID () throws Exception{
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
@@ -33,7 +43,7 @@ public class ProductsTypesTest extends Init{
         productTypesPage = new ProductTypesPage(driver);
         productTypesPage.AddProductTypeSameID(excel.getCellData(1,11),excel.getCellData(1,12));
     }
-    @Test (priority = 3)
+    @Test (priority = 4)
     public void EditProductsTypes() throws Exception{
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
@@ -43,7 +53,7 @@ public class ProductsTypesTest extends Init{
         productTypesPage = new ProductTypesPage(driver);
         productTypesPage.EditProductType();
     }
-    @Test (priority = 4)
+    @Test (priority = 5)
     public void RemoveProductsTypes() throws Exception{
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);

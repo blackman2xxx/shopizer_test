@@ -2,10 +2,7 @@ package ShopizerAdmin.Pages.InventoryManagementPage.CategoryPage;
 
 import Initialization.ValidateHelper;
 import org.apache.pdfbox.contentstream.operator.state.SetRenderingIntent;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -30,6 +27,7 @@ public class CategoryPage {
     private By removeBtn = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-catalogue[1]/ngx-categories[1]/div[1]/div[1]/ngx-categories-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[5]/td[7]/ng2-st-tbody-custom[1]/a[2]/i[1]");
     private By removeConfirm = By.xpath("//button[contains(text(),'Ok')]");
     private By categolyList = By.xpath("//span[contains(text(),'List of category')]");
+    private By nameSearch = By.xpath("//input[@placeholder='Category name']");
 
     public CategoryPage(WebDriver driver) {
         this.driver = driver;
@@ -63,6 +61,24 @@ public class CategoryPage {
     public void ListCheck (String name, String code){
         Assert.assertEquals(name,validateHelper.getText(nameGet));
         Assert.assertEquals(code,validateHelper.getText(codeGet));
+    }
+    public void SearchByName(String name) throws InterruptedException {
+        boolean check;
+        validateHelper.clickElement(inventoryTab);
+        validateHelper.clickElement(categoryTab);
+        validateHelper.clickElement(categolyList);
+        validateHelper.sendText(nameSearch,name);
+        validateHelper.sendTextKey(nameSearch, Keys.ENTER);
+        Thread.sleep(2000);
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(nameGet));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertTrue(check);
+        Assert.assertEquals(name,validateHelper.getText(nameGet));
     }
     public void AddCategorySameID (String code, String order, String title, String name){
         boolean check;

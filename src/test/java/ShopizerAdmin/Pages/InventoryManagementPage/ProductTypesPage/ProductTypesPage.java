@@ -2,14 +2,12 @@ package ShopizerAdmin.Pages.InventoryManagementPage.ProductTypesPage;
 
 import Initialization.ValidateHelper;
 import org.apache.pdfbox.contentstream.operator.state.SetRenderingIntent;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
 
 public class ProductTypesPage {
     private WebDriver driver;
@@ -30,6 +28,7 @@ public class ProductTypesPage {
     private By editBtn = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-catalogue[1]/ngx-types[1]/div[1]/div[1]/ngx-types-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[6]/td[4]/ng2-st-tbody-custom[1]/a[1]/i[1]");
     private By removeBtn = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-catalogue[1]/ngx-types[1]/div[1]/div[1]/ngx-types-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[6]/td[4]/ng2-st-tbody-custom[1]/a[2]/i[1]");
     private By removeConfirm = By.xpath("//button[normalize-space()='Ok']");
+    private By codeSearch = By.xpath("//input[@placeholder='Code']");
 
     public ProductTypesPage(WebDriver driver) {
         this.driver = driver;
@@ -48,6 +47,7 @@ public class ProductTypesPage {
         validateHelper.clickElement(englishSelect);
         validateHelper.sendText(nameInput,name);
         validateHelper.clickElement(submitBtn);
+        ListCheck(code);
     }
     public void AddProductTypeData (String code, String name){
         validateHelper.clickElement(createBtn);
@@ -61,6 +61,24 @@ public class ProductTypesPage {
     }
     public void ListCheck (String code){
 //        Assert.assertEquals(name,validateHelper.getText(nameGet));
+        Assert.assertEquals(code,validateHelper.getText(codeGet));
+    }
+    public void SearchByCode(String code) throws InterruptedException {
+        boolean check;
+        validateHelper.clickElement(inventoryTab);
+        validateHelper.clickElement(productTypesTab);
+        validateHelper.clickElement(listTab);
+        validateHelper.sendText(codeSearch,code);
+        validateHelper.sendTextKey(codeSearch, Keys.ENTER);
+        Thread.sleep(2000);
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(codeGet));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertTrue(check);
         Assert.assertEquals(code,validateHelper.getText(codeGet));
     }
     public void AddProductTypeSameID (String code, String name){

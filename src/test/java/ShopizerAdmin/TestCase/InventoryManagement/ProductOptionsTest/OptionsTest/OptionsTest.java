@@ -24,6 +24,16 @@ public class OptionsTest extends Init{
         }
     }
     @Test (priority = 2)
+    public void SearchByName() throws Exception{
+        driver.get(urlAdmin);
+        loginPage = new LoginPage(driver);
+        excel = new ExcelHelpers();
+        excel.setExcelFile(excelPath,"data");
+        loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
+        optionsPage = new OptionsPage(driver);
+        optionsPage.SearchByName(excel.getCellData(2,20));
+    }
+    @Test (priority = 3)
     public void AddOptionsSameID() throws Exception{
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
@@ -33,7 +43,7 @@ public class OptionsTest extends Init{
         optionsPage = new OptionsPage(driver);
         optionsPage.AddOptionSameID(excel.getCellData(1,19),excel.getCellData(1,20));
     }
-    @Test (priority = 3)
+    @Test (priority = 4)
     public void EditOptions() throws Exception{
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
@@ -43,7 +53,7 @@ public class OptionsTest extends Init{
         optionsPage = new OptionsPage(driver);
         optionsPage.EditOption("Option 10");
     }
-    @Test (priority = 4)
+    @Test (priority = 5)
     public void RemoveOptions() throws Exception{
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);

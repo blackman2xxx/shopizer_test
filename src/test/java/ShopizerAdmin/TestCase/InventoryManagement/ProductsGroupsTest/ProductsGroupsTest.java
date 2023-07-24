@@ -25,6 +25,16 @@ public class ProductsGroupsTest extends Init{
         }
     }
     @Test (priority = 2)
+    public void SearchByCode() throws Exception{
+        driver.get(urlAdmin);
+        loginPage = new LoginPage(driver);
+        excel = new ExcelHelpers();
+        excel.setExcelFile(excelPath,"data");
+        loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
+        productsGroupsPage = new ProductsGroupsPage(driver);
+        productsGroupsPage.SearchByCode(excel.getCellData(2,14));
+    }
+    @Test (priority = 3)
     public void ProductsGroupsSameID() throws Exception{
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
@@ -34,7 +44,7 @@ public class ProductsGroupsTest extends Init{
         productsGroupsPage = new ProductsGroupsPage(driver);
         productsGroupsPage.AddProductsGroupsSameID(excel.getCellData(1,14));
     }
-    @Test (priority = 3)
+    @Test (priority = 4)
     public void EditProductsGroups() throws Exception{
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
@@ -44,7 +54,7 @@ public class ProductsGroupsTest extends Init{
         productsGroupsPage = new ProductsGroupsPage(driver);
         productsGroupsPage.EditProductsGroups();
     }
-    @Test (priority = 4)
+    @Test (priority = 5)
     public void RemoveProductsGroups() throws Exception{
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);

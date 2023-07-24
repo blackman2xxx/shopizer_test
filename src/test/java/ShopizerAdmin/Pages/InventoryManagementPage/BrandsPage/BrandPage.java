@@ -1,10 +1,7 @@
 package ShopizerAdmin.Pages.InventoryManagementPage.BrandsPage;
 
 import Initialization.ValidateHelper;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -28,6 +25,8 @@ public class BrandPage {
     private By removeBtn = By.xpath("/html[1]/body[1]/ngx-app[1]/div[1]/ngx-pages[1]/ngx-sample-layout[1]/nb-layout[1]/div[1]/div[1]/div[1]/div[1]/div[1]/nb-layout-column[1]/ngx-catalogue[1]/ngx-brands[1]/div[1]/div[1]/ngx-brands-list[1]/nb-card[1]/nb-card-body[1]/div[1]/ng2-smart-table[1]/table[1]/tbody[1]/tr[11]/td[4]/ng2-st-tbody-custom[1]/a[2]/i[1]");
     private By removeConfirm = By.xpath("//button[contains(text(),'Ok')]");
     private By brandList = By.xpath("//span[normalize-space()='List of brands']");
+    private By nameSearch = By.xpath("//input[@placeholder='Brand name']");
+    private By codeSearch = By.xpath("//input[@placeholder='Code']");
 
     public BrandPage(WebDriver driver) {
         this.driver = driver;
@@ -56,6 +55,42 @@ public class BrandPage {
     }
     public void ListCheck (String name, String code){
         Assert.assertEquals(name,validateHelper.getText(nameGet));
+        Assert.assertEquals(code,validateHelper.getText(codeGet));
+    }
+    public void SearchByName (String name) throws InterruptedException {
+        boolean check;
+        validateHelper.clickElement(inventoryTab);
+        validateHelper.clickElement(brandTab);
+        validateHelper.clickElement(brandList);
+        validateHelper.sendText(nameSearch,name);
+        validateHelper.sendTextKey(nameSearch, Keys.ENTER);
+        Thread.sleep(2000);
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(nameGet));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertTrue(check);
+        Assert.assertEquals(name,validateHelper.getText(nameGet));
+    }
+    public void SearchByCode (String code) throws InterruptedException {
+        boolean check;
+        validateHelper.clickElement(inventoryTab);
+        validateHelper.clickElement(brandTab);
+        validateHelper.clickElement(brandList);
+        validateHelper.sendText(codeSearch,code);
+        validateHelper.sendTextKey(codeSearch, Keys.ENTER);
+        Thread.sleep(2000);
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(codeGet));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertTrue(check);
         Assert.assertEquals(code,validateHelper.getText(codeGet));
     }
     public void AddBrandSameID (String code, String order, String name, String title){
