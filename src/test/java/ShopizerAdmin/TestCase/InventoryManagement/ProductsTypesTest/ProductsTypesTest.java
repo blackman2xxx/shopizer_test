@@ -10,7 +10,7 @@ public class ProductsTypesTest extends Init{
     public LoginPage loginPage;
     public ProductTypesPage productTypesPage;
     public ExcelHelpers excel;
-    @Test
+    @Test (priority = 1)
     public void ProductsTypesTest() throws Exception{
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
@@ -19,12 +19,11 @@ public class ProductsTypesTest extends Init{
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         productTypesPage = new ProductTypesPage(driver);
         productTypesPage.AddProductType(excel.getCellData(1,11),excel.getCellData(1,12));
-        productTypesPage.ListCheck(excel.getCellData(1,11));
-        for (int i = 1; i < 5; i++){
+        for (int i = 1; i < 6; i++){
             productTypesPage.AddProductTypeData(excel.getCellData(i+1,11),excel.getCellData(i+1,12));
         }
     }
-    @Test
+    @Test (priority = 2)
     public void ProductsTypesTestFail() throws Exception{
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
@@ -32,7 +31,26 @@ public class ProductsTypesTest extends Init{
         excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
         productTypesPage = new ProductTypesPage(driver);
-        productTypesPage.AddProductType(excel.getCellData(1,11),excel.getCellData(1,12));
-        productTypesPage.ListCheck(excel.getCellData(1,11));
+        productTypesPage.AddProductTypeSameID(excel.getCellData(1,11),excel.getCellData(1,12));
+    }
+    @Test (priority = 3)
+    public void EditProductsTypes() throws Exception{
+        driver.get(urlAdmin);
+        loginPage = new LoginPage(driver);
+        excel = new ExcelHelpers();
+        excel.setExcelFile(excelPath,"data");
+        loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
+        productTypesPage = new ProductTypesPage(driver);
+        productTypesPage.EditProductType();
+    }
+    @Test (priority = 4)
+    public void RemoveProductsTypes() throws Exception{
+        driver.get(urlAdmin);
+        loginPage = new LoginPage(driver);
+        excel = new ExcelHelpers();
+        excel.setExcelFile(excelPath,"data");
+        loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
+        productTypesPage = new ProductTypesPage(driver);
+        productTypesPage.RemoveProductType();
     }
 }
