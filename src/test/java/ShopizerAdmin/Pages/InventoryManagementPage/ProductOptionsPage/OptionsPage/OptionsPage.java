@@ -96,13 +96,15 @@ public class OptionsPage {
         }
         Assert.assertFalse(check);
     }
-    public void EditOption (String editnamedata){
+    public void EditOption (String editnamedata) throws InterruptedException {
         validateHelper.clickElement(inventoryTab);
         validateHelper.clickElement(productOptionsPage);
         validateHelper.clickElement(optionsPage);
         validateHelper.clickElementwithJS(editBtn);
         validateHelper.sendText(nameInput, editnamedata);
+        Thread.sleep(1000);
         validateHelper.clickElement(submitBtn);
+        Thread.sleep(1000);
         driver.navigate().refresh();
         Assert.assertEquals(editnamedata,validateHelper.getAttribute(nameInput, "value"));
     }

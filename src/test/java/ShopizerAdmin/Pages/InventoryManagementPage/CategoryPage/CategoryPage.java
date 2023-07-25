@@ -45,6 +45,7 @@ public class CategoryPage {
         validateHelper.sendText(titleInput,title);
         validateHelper.sendText(nameInput,name);
         validateHelper.clickElementwithJS(submitBtn);
+        ListCheck(name,code);
     }
 
     public void AddCategoryData (String code, String order, String title, String name){
@@ -55,7 +56,7 @@ public class CategoryPage {
         validateHelper.sendText(titleInput,title);
         validateHelper.sendText(nameInput,name);
         validateHelper.clickElementwithJS(submitBtn);
-        ListCheck(name,code);
+
     }
 
     public void ListCheck (String name, String code){
@@ -101,13 +102,14 @@ public class CategoryPage {
         }
         Assert.assertFalse(check);
     }
-    public void EditCategory (String editnamedata){
+    public void EditCategory (String editnamedata) throws InterruptedException {
         validateHelper.clickElement(inventoryTab);
         validateHelper.clickElement(categoryTab);
         validateHelper.clickElement(categolyList);
         validateHelper.clickElement(editBtn);
         validateHelper.sendText(nameInput, editnamedata);
         validateHelper.clickElement(submitBtn);
+        Thread.sleep(1000);
         driver.navigate().refresh();
         Assert.assertEquals(editnamedata,validateHelper.getAttribute(nameInput, "value"));
     }

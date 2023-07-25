@@ -113,13 +113,14 @@ public class BrandPage {
         }
         Assert.assertFalse(check);
     }
-    public void EditBrand(String editnamedata){
+    public void EditBrand(String editnamedata) throws InterruptedException {
         validateHelper.clickElement(inventoryTab);
         validateHelper.clickElement(brandTab);
         validateHelper.clickElement(brandList);
         validateHelper.clickElementwithJS(editBtn);
         validateHelper.sendText(nameInput,editnamedata);
         validateHelper.clickElement(submitBtn);
+        Thread.sleep(1000);
         driver.navigate().refresh();
         Assert.assertEquals(editnamedata,validateHelper.getAttribute(nameInput,"value"));
     }

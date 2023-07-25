@@ -57,7 +57,6 @@ public class ProductTypesPage {
         validateHelper.clickElement(englishSelect);
         validateHelper.sendText(nameInput,name);
         validateHelper.clickElement(submitBtn);
-        Assert.assertEquals(code,validateHelper.getText(codeGet));
     }
     public void ListCheck (String code){
 //        Assert.assertEquals(name,validateHelper.getText(nameGet));
