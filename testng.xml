@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/Shopizer_test/shopizertest">
+        <classes>
+            <class name="ShopizerAdmin.TestCase.Login.LoginTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.StoreManagement.StoreManagementTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.UserManagement.UserManagementTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductsTypesTest.ProductsTypesTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.InventoryManagement.BrandTest.BrandTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.InventoryManagement.CategoryTest.CategoryTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.OptionsTest.OptionsTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.ValuesTest.ValuesTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductsTest.ProductsTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductsGroupsTest.ProductsGroupsTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.ContentManagement.PagesTest.PagesTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.ContentManagement.BoxesTest.BoxesTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.ShippingManagement.ExpeditionTest.ExpeditionTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.ShippingManagement.ShippingOriginTest.ShippingOriginTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.ShippingManagement.PackagingTest.PackagingTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.TaxManagement.ClassTest.ClassTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.TaxManagement.RateTest.RateTest">
+            </class>
+            <class name="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest">
+            </class>
+
+            <class name="ShopizerUser.TestCase.Register.RegisterTest">
+            </class>
+            <class name="ShopizerUser.TestCase.Login.LoginTest">
+            </class>
+            <class name="ShopizerUser.TestCase.AccountTest.AccountTest">
+            </class>
+            <class name="ShopizerUser.TestCase.ProductInforTest.ProductInforTest">
+            </class>
+            <class name="ShopizerUser.TestCase.CartTest.CartTest">
+            </class>
+            <class name="ShopizerUser.TestCase.CheckoutTest.CheckoutTest">
+            </class>
+        </classes>
+    </test>
+</suite>

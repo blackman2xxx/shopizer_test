@@ -10,7 +10,7 @@ public class ProductInforTest extends Init {
     public LoginPage loginPage;
     public ExcelHelpers excel;
     public ProductInforPage productInforPage;
-    @Test
+    @Test (priority = 1)
     public void ProductInfor() throws Exception {
         driver.get(urlUser);
 
@@ -21,7 +21,7 @@ public class ProductInforTest extends Init {
         productInforPage = new ProductInforPage(driver);
         productInforPage.ProductInfor(excel.getCellData(1,30), excel.getCellData(1,31), excel.getCellData(1,25), excel.getCellData(1,7));
     }
-    @Test
+    @Test (priority = 2)
     public void AddReview() throws Exception {
         driver.get(urlUser);
 

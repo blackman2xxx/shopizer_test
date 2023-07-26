@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe4a428c-35f3-47fc-b6d7-9e81b0d971bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/CustomerManagementPage/CustomerManagementPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/TaxManagementPage/TaxRatePage/TaxRatePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/CustomerManagement/CustomerManagementTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/TaxManagement/RateTest/RateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/CartTest/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/CartTest/CartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Login/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Login/LoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/ProductInforTest/ProductInforTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/ProductInforTest/ProductInforTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Register/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Register/RegisterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
       <recent name="D:\Shopizer_test\shopizertest\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.CustomerManagementTest">
+  <component name="RunManager" selected="TestNG.D:/Shopizer_test/shopizertest/testng.xml">
     <configuration name="CustomerManagementTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
@@ -65,24 +66,6 @@
       <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.CustomerManagement" />
       <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerManagementTest.AddCustomer" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shopizertest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ShopizerAdmin.TestCase.CustomerManagement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.CustomerManagement" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest" />
-      <option name="METHOD_NAME" value="AddCustomer" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -125,30 +108,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RateTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="D:/Shopizer_test/shopizertest/runTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ShopizerAdmin.TestCase.TaxManagement.RateTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.TaxManagement.RateTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.TaxManagement.RateTest.RateTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/runTest.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="D:/Shopizer_test/shopizertest/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="shopizertest" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="USE_DEFAULT_REPORTERS" value="true" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="TestNG.CustomerManagementTest" />
+      <item itemvalue="TestNG.CustomerManagementTest.EditCustomer" />
+      <item itemvalue="TestNG.CustomerManagementTest.RemoveCustomer" />
+      <item itemvalue="TestNG.D:/Shopizer_test/shopizertest/runTest.xml" />
+      <item itemvalue="TestNG.D:/Shopizer_test/shopizertest/testng.xml" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.D:/Shopizer_test/shopizertest/testng.xml" />
+        <item itemvalue="TestNG.D:/Shopizer_test/shopizertest/runTest.xml" />
         <item itemvalue="TestNG.CustomerManagementTest" />
         <item itemvalue="TestNG.CustomerManagementTest.RemoveCustomer" />
         <item itemvalue="TestNG.CustomerManagementTest.EditCustomer" />
-        <item itemvalue="TestNG.CustomerManagementTest.AddCustomer" />
-        <item itemvalue="TestNG.RateTest" />
       </list>
     </recent_temporary>
   </component>

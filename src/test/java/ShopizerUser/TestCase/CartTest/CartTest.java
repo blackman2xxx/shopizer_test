@@ -10,7 +10,7 @@ public class CartTest extends Init {
     public LoginPage loginPage;
     public ExcelHelpers excel;
     public CartPage cartPage;
-    @Test
+    @Test (priority = 1)
     public void AddCartTest() throws Exception {
         driver.get(urlUser);
 
@@ -22,7 +22,7 @@ public class CartTest extends Init {
         cartPage.AddCart();
 //        Thread.sleep(10000);
     }
-    @Test
+    @Test (priority = 2)
     public void RemoveProductFromCart() throws Exception {
         driver.get(urlUser);
 
@@ -34,7 +34,7 @@ public class CartTest extends Init {
         cartPage.RemoveProductFromCart();
 //        Thread.sleep(10000);
     }
-    @Test
+    @Test (priority = 3)
     public void RemoveProductFromMiniCart() throws Exception {
         driver.get(urlUser);
 
@@ -46,7 +46,7 @@ public class CartTest extends Init {
         cartPage.RemoveProductFromMiniCart();
 //        Thread.sleep(10000);
     }
-    @Test
+    @Test (priority = 4)
     public void RemoveProductFromCartByQuantity() throws Exception {
         driver.get(urlUser);
 
@@ -58,7 +58,7 @@ public class CartTest extends Init {
         cartPage.RemoveProductFromCartByQuantity();
 //        Thread.sleep(10000);
     }
-    @Test
+    @Test (priority = 5)
     public void RemoveAllProductsFromCart() throws Exception {
         driver.get(urlUser);
 
