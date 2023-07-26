@@ -1,56 +1,56 @@
-package ShopizerAdmin.TestCase.ShippingManagement.PackagingTest;
+package ShopizerAdmin.TestCase.TaxManagement.ClassTest;
 
 import Initialization.ExcelHelpers;
 import Initialization.Init;
 import ShopizerAdmin.Pages.LoginPage.LoginPage;
-import ShopizerAdmin.Pages.ShippingManagementPage.PackagingPage.PackagingPage;
+import ShopizerAdmin.Pages.TaxManagementPage.TaxClassPage.TaxClassPage;
 import org.testng.annotations.Test;
 
-public class PackagingTest extends Init {
+public class ClassTest extends Init {
     public LoginPage loginPage;
     public ExcelHelpers excel;
-    public PackagingPage packagingPage;
+    public TaxClassPage taxClassPage;
     @Test (priority = 1)
-    public void AddBox () throws Exception {
+    public void AddClass() throws Exception {
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
         excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
-        packagingPage = new PackagingPage(driver);
-        packagingPage.AddBox(excel.getCellData(1,74),excel.getCellData(1,75),excel.getCellData(1,76),excel.getCellData(1,77),excel.getCellData(1,78));
+        taxClassPage = new TaxClassPage(driver);
+        taxClassPage.AddClass(excel.getCellData(1,79),excel.getCellData(1,80));
         for (int i = 1; i < 6; i++) {
-            packagingPage.AddBoxData(excel.getCellData(i+1,74),excel.getCellData(i+1,75),excel.getCellData(i+1,76),excel.getCellData(i+1,77),excel.getCellData(i+1,78));
+            taxClassPage.AddClassData(excel.getCellData(i+1,79),excel.getCellData(i+1,80));
         }
     }
     @Test (priority = 2)
-    public void AddBoxSameCode () throws Exception {
+    public void AddClassSameCode() throws Exception {
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
         excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
-        packagingPage = new PackagingPage(driver);
-        packagingPage.AddBoxSameCode(excel.getCellData(1,74),excel.getCellData(1,75),excel.getCellData(1,76),excel.getCellData(1,77),excel.getCellData(1,78));
+        taxClassPage = new TaxClassPage(driver);
+        taxClassPage.AddClassSameCode(excel.getCellData(1,79),excel.getCellData(1,80));
     }
     @Test (priority = 3)
-    public void EditBox () throws Exception {
+    public void EditClass() throws Exception {
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
         excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
-        packagingPage = new PackagingPage(driver);
-        packagingPage.EditBox("70");
+        taxClassPage = new TaxClassPage(driver);
+        taxClassPage.EditClass("Class 10");
     }
     @Test (priority = 4)
-    public void RemoveBox () throws Exception {
+    public void RemoveClass() throws Exception {
         driver.get(urlAdmin);
         loginPage = new LoginPage(driver);
         excel = new ExcelHelpers();
         excel.setExcelFile(excelPath,"data");
         loginPage.SignIn(excel.getCellData(1,0), excel.getCellData(1,1 ));
-        packagingPage = new PackagingPage(driver);
-        packagingPage.RemoveBox();
+        taxClassPage = new TaxClassPage(driver);
+        taxClassPage.RemoveClass();
     }
 }

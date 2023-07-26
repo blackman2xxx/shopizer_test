@@ -3,7 +3,7 @@ package ShopizerAdmin.TestCase.ShippingManagement.ShippingOriginTest;
 import Initialization.ExcelHelpers;
 import Initialization.Init;
 import ShopizerAdmin.Pages.LoginPage.LoginPage;
-import ShopizerAdmin.Pages.ShippingManagement.ShippingOriginPage.ShippingOriginPage;
+import ShopizerAdmin.Pages.ShippingManagementPage.ShippingOriginPage.ShippingOriginPage;
 import org.testng.annotations.Test;
 
 public class ShippingOriginTest extends Init {

@@ -1,9 +1,8 @@
-package ShopizerAdmin.Pages.ShippingManagement.ShippingOriginPage;
+package ShopizerAdmin.Pages.ShippingManagementPage.ShippingOriginPage;
 
 import Initialization.ValidateHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 public class ShippingOriginPage {

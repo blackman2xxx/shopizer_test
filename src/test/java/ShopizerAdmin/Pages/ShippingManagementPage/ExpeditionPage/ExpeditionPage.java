@@ -1,4 +1,4 @@
-package ShopizerAdmin.Pages.ShippingManagement.ExpeditionPage;
+package ShopizerAdmin.Pages.ShippingManagementPage.ExpeditionPage;
 
 import Initialization.ValidateHelper;
 import org.openqa.selenium.*;

@@ -1,4 +1,4 @@
-package ShopizerAdmin.TestCase.InventoryManagement.Category;
+package ShopizerAdmin.TestCase.InventoryManagement.CategoryTest;
 
 import Initialization.ExcelHelpers;
 import Initialization.Init;

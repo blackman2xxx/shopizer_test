@@ -1,4 +1,4 @@
-package ShopizerAdmin.Pages.ShippingManagement.PackagingPage;
+package ShopizerAdmin.Pages.ShippingManagementPage.PackagingPage;
 
 import Initialization.ValidateHelper;
 import org.openqa.selenium.By;
@@ -45,6 +45,28 @@ public class PackagingPage {
         validateHelper.sendText(weightInput,weight);
         validateHelper.clickElementwithJS(submitBtn);
         ListCheck(code,width,height,length,weight);
+    }
+    public void AddBoxSameCode (String code, String width, String height, String length, String weight) throws InterruptedException {
+        boolean check;
+        validateHelper.clickElement(shippingManagementTab);
+        validateHelper.clickElement(packagingTab);
+        validateHelper.clickElement(createBtn);
+        validateHelper.clickElement(boxpackingCheckbox);
+        validateHelper.sendText(codeInput,code);
+        validateHelper.sendText(widthInput,width);
+        validateHelper.sendText(heightInput,height);
+        validateHelper.sendText(lenghtInput,length);
+        validateHelper.sendText(weightInput,weight);
+        validateHelper.clickElementwithJS(submitBtn);
+        Thread.sleep(1000);
+        WebDriverWait wait = new WebDriverWait(driver, 10); // Chờ tối đa 10 giây
+        try {
+            WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(codeGet));
+            check = true;
+        } catch (org.openqa.selenium.TimeoutException e) {
+            check = false;
+        }
+        Assert.assertFalse(check);
     }
     public void ListCheck (String code, String width, String height, String length, String weight){
         Assert.assertEquals(code,validateHelper.getText(codeGet));

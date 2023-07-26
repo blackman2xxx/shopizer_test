@@ -3,7 +3,7 @@ package ShopizerAdmin.TestCase.ShippingManagement.ExpeditionTest;
 import Initialization.ExcelHelpers;
 import Initialization.Init;
 import ShopizerAdmin.Pages.LoginPage.LoginPage;
-import ShopizerAdmin.Pages.ShippingManagement.ExpeditionPage.ExpeditionPage;
+import ShopizerAdmin.Pages.ShippingManagementPage.ExpeditionPage.ExpeditionPage;
 import org.testng.annotations.Test;
 
 public class ExpeditionTest extends Init {
