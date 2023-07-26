@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe4a428c-35f3-47fc-b6d7-9e81b0d971bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/TaxManagementPage/TaxClassPage/TaxClassPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/TaxManagement/ClassTest/ClassTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/CustomerManagementPage/CustomerManagementPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/TaxManagementPage/TaxRatePage/TaxRatePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/CustomerManagement/CustomerManagementTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/TaxManagement/RateTest/RateTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/ShippingManagement/ExpeditionPage/ExpeditionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/ShippingManagementPage/ExpeditionPage/ExpeditionPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/ShippingManagement/PackagingPage/PackagingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/ShippingManagementPage/PackagingPage/PackagingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/ShippingManagement/ShippingOriginPage/ShippingOriginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/Pages/ShippingManagementPage/ShippingOriginPage/ShippingOriginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/Category/CategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/InventoryManagement/CategoryTest/CategoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/ShippingManagement/ExpeditionTest/ExpeditionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/ShippingManagement/ExpeditionTest/ExpeditionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/ShippingManagement/PackagingTest/PackagingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/ShippingManagement/PackagingTest/PackagingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/ShippingManagement/ShippingOriginTest/ShippingOriginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerAdmin/TestCase/ShippingManagement/ShippingOriginTest/ShippingOriginTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,17 +53,17 @@
       <recent name="D:\Shopizer_test\shopizertest\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.PackagingTest">
-    <configuration name="ClassTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.CustomerManagementTest">
+    <configuration name="CustomerManagementTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ShopizerAdmin.TestCase.TaxManagement.ClassTest.*" />
+          <option name="PATTERN" value="ShopizerAdmin.TestCase.CustomerManagement.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.TaxManagement.ClassTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.TaxManagement.ClassTest.ClassTest" />
+      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.CustomerManagement" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -76,17 +71,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassTest.RemoveClass" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerManagementTest.AddCustomer" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ShopizerAdmin.TestCase.TaxManagement.ClassTest.*" />
+          <option name="PATTERN" value="ShopizerAdmin.TestCase.CustomerManagement.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.TaxManagement.ClassTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.TaxManagement.ClassTest.ClassTest" />
-      <option name="METHOD_NAME" value="RemoveClass" />
+      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.CustomerManagement" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest" />
+      <option name="METHOD_NAME" value="AddCustomer" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -94,53 +89,53 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PackagingTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerManagementTest.EditCustomer" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ShopizerAdmin.TestCase.ShippingManagement.PackagingTest.*" />
+          <option name="PATTERN" value="ShopizerAdmin.TestCase.CustomerManagement.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.ShippingManagement.PackagingTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.ShippingManagement.PackagingTest.PackagingTest" />
+      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.CustomerManagement" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest" />
+      <option name="METHOD_NAME" value="EditCustomer" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerManagementTest.RemoveCustomer" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="shopizertest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ShopizerAdmin.TestCase.CustomerManagement.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.CustomerManagement" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest" />
+      <option name="METHOD_NAME" value="RemoveCustomer" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RateTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="shopizertest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ShopizerAdmin.TestCase.TaxManagement.RateTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.TaxManagement.RateTest" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.TaxManagement.RateTest.RateTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PackagingTest.EditBox" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shopizertest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ShopizerAdmin.TestCase.ShippingManagement.PackagingTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.ShippingManagement.PackagingTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.ShippingManagement.PackagingTest.PackagingTest" />
-      <option name="METHOD_NAME" value="EditBox" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PackagingTest.RemoveBox" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shopizertest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ShopizerAdmin.TestCase.ShippingManagement.PackagingTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.ShippingManagement.PackagingTest" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.ShippingManagement.PackagingTest.PackagingTest" />
-      <option name="METHOD_NAME" value="RemoveBox" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -149,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.PackagingTest" />
-        <item itemvalue="TestNG.ClassTest" />
-        <item itemvalue="TestNG.ClassTest.RemoveClass" />
-        <item itemvalue="TestNG.PackagingTest.RemoveBox" />
-        <item itemvalue="TestNG.PackagingTest.EditBox" />
+        <item itemvalue="TestNG.CustomerManagementTest" />
+        <item itemvalue="TestNG.CustomerManagementTest.RemoveCustomer" />
+        <item itemvalue="TestNG.CustomerManagementTest.EditCustomer" />
+        <item itemvalue="TestNG.CustomerManagementTest.AddCustomer" />
+        <item itemvalue="TestNG.RateTest" />
       </list>
     </recent_temporary>
   </component>
