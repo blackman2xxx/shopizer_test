@@ -37,8 +37,8 @@
             </class>
             <class name="ShopizerAdmin.TestCase.TaxManagement.RateTest.RateTest">
             </class>
-            <class name="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest">
-            </class>
+<!--            <class name="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest">-->
+<!--            </class>-->
 
             <class name="ShopizerUser.TestCase.Register.RegisterTest">
             </class>

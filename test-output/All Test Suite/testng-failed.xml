@@ -3,13 +3,23 @@
 <suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="D:/Shopizer_test/shopizertest(failed)">
     <classes>
-      <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.ValuesTest.ValuesTest">
+      <class name="ShopizerAdmin.TestCase.InventoryManagement.BrandTest.BrandTest">
         <methods>
           <include name="Setup"/>
-          <include name="ValuesTest"/>
+          <include name="SearchByName"/>
           <include name="TearDown"/>
         </methods>
-      </class> <!-- ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.ValuesTest.ValuesTest -->
+      </class> <!-- ShopizerAdmin.TestCase.InventoryManagement.BrandTest.BrandTest -->
+      <class name="ShopizerUser.TestCase.CartTest.CartTest">
+        <methods>
+          <include name="RemoveProductFromCart"/>
+          <include name="Setup"/>
+          <include name="RemoveProductFromCartByQuantity"/>
+          <include name="TearDown"/>
+          <include name="RemoveAllProductsFromCart"/>
+          <include name="RemoveProductFromMiniCart"/>
+        </methods>
+      </class> <!-- ShopizerUser.TestCase.CartTest.CartTest -->
       <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductsTest.ProductsTest">
         <methods>
           <include name="Setup"/>
@@ -17,22 +27,6 @@
           <include name="TearDown"/>
         </methods>
       </class> <!-- ShopizerAdmin.TestCase.InventoryManagement.ProductsTest.ProductsTest -->
-      <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.OptionsTest.OptionsTest">
-        <methods>
-          <include name="Setup"/>
-          <include name="TearDown"/>
-          <include name="SearchByName"/>
-        </methods>
-      </class> <!-- ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.OptionsTest.OptionsTest -->
-      <class name="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest">
-        <methods>
-          <include name="Setup"/>
-          <include name="EditCustomer"/>
-          <include name="RemoveCustomer"/>
-          <include name="TearDown"/>
-          <include name="AddCustomer"/>
-        </methods>
-      </class> <!-- ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest -->
       <class name="ShopizerAdmin.TestCase.ShippingManagement.ExpeditionTest.ExpeditionTest">
         <methods>
           <include name="CountryUnselect"/>
@@ -48,20 +42,6 @@
           <include name="CheckoutTest"/>
         </methods>
       </class> <!-- ShopizerUser.TestCase.CheckoutTest.CheckoutTest -->
-      <class name="ShopizerAdmin.TestCase.TaxManagement.RateTest.RateTest">
-        <methods>
-          <include name="AddTaxRate"/>
-          <include name="Setup"/>
-          <include name="TearDown"/>
-        </methods>
-      </class> <!-- ShopizerAdmin.TestCase.TaxManagement.RateTest.RateTest -->
-      <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductsTypesTest.ProductsTypesTest">
-        <methods>
-          <include name="EditProductsTypes"/>
-          <include name="Setup"/>
-          <include name="TearDown"/>
-        </methods>
-      </class> <!-- ShopizerAdmin.TestCase.InventoryManagement.ProductsTypesTest.ProductsTypesTest -->
       <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductsGroupsTest.ProductsGroupsTest">
         <methods>
           <include name="Setup"/>
@@ -69,30 +49,13 @@
           <include name="ProductsGroupsSameID"/>
         </methods>
       </class> <!-- ShopizerAdmin.TestCase.InventoryManagement.ProductsGroupsTest.ProductsGroupsTest -->
-      <class name="ShopizerUser.TestCase.ProductInforTest.ProductInforTest">
+      <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.OptionsTest.OptionsTest">
         <methods>
-          <include name="AddReview"/>
-          <include name="Setup"/>
-          <include name="ProductInfor"/>
-          <include name="TearDown"/>
-        </methods>
-      </class> <!-- ShopizerUser.TestCase.ProductInforTest.ProductInforTest -->
-      <class name="ShopizerUser.TestCase.CartTest.CartTest">
-        <methods>
-          <include name="RemoveProductFromCart"/>
           <include name="Setup"/>
           <include name="TearDown"/>
-          <include name="RemoveAllProductsFromCart"/>
-          <include name="RemoveProductFromMiniCart"/>
-        </methods>
-      </class> <!-- ShopizerUser.TestCase.CartTest.CartTest -->
-      <class name="ShopizerAdmin.TestCase.InventoryManagement.BrandTest.BrandTest">
-        <methods>
-          <include name="Setup"/>
           <include name="SearchByName"/>
-          <include name="TearDown"/>
         </methods>
-      </class> <!-- ShopizerAdmin.TestCase.InventoryManagement.BrandTest.BrandTest -->
+      </class> <!-- ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.OptionsTest.OptionsTest -->
       <class name="ShopizerAdmin.TestCase.UserManagement.UserManagementTest">
         <methods>
           <include name="Setup"/>
@@ -100,6 +63,27 @@
           <include name="TearDown"/>
         </methods>
       </class> <!-- ShopizerAdmin.TestCase.UserManagement.UserManagementTest -->
+      <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.ValuesTest.ValuesTest">
+        <methods>
+          <include name="Setup"/>
+          <include name="ValuesTest"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.ValuesTest.ValuesTest -->
+      <class name="ShopizerAdmin.TestCase.InventoryManagement.ProductsTypesTest.ProductsTypesTest">
+        <methods>
+          <include name="EditProductsTypes"/>
+          <include name="Setup"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- ShopizerAdmin.TestCase.InventoryManagement.ProductsTypesTest.ProductsTypesTest -->
+      <class name="ShopizerAdmin.TestCase.TaxManagement.RateTest.RateTest">
+        <methods>
+          <include name="AddTaxRate"/>
+          <include name="Setup"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- ShopizerAdmin.TestCase.TaxManagement.RateTest.RateTest -->
     </classes>
   </test> <!-- D:/Shopizer_test/shopizertest(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

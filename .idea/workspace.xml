@@ -5,12 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe4a428c-35f3-47fc-b6d7-9e81b0d971bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/runTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/CartTest/CartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/CartTest/CartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Login/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Login/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/ProductInforTest/ProductInforTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/ProductInforTest/ProductInforTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Register/RegisterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ShopizerUser/TestCase/Register/RegisterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/All Test Suite/D__Shopizer_test_shopizertest.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/All Test Suite/D__Shopizer_test_shopizertest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/All Test Suite/D__Shopizer_test_shopizertest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/All Test Suite/D__Shopizer_test_shopizertest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/All Test Suite/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/All Test Suite/testng-failed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.ContentManagement.BoxesTest.BoxesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.ContentManagement.BoxesTest.BoxesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.ContentManagement.PagesTest.PagesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.ContentManagement.PagesTest.PagesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.BrandTest.BrandTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.BrandTest.BrandTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.CategoryTest.CategoryTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.CategoryTest.CategoryTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.OptionsTest.OptionsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.OptionsTest.OptionsTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.ValuesTest.ValuesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.ProductOptionsTest.ValuesTest.ValuesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.ProductsGroupsTest.ProductsGroupsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.ProductsGroupsTest.ProductsGroupsTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.ProductsTest.ProductsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.ProductsTest.ProductsTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.ProductsTypesTest.ProductsTypesTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.InventoryManagement.ProductsTypesTest.ProductsTypesTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.Login.LoginTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.Login.LoginTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.ShippingManagement.ExpeditionTest.ExpeditionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.ShippingManagement.ExpeditionTest.ExpeditionTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.ShippingManagement.PackagingTest.PackagingTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.ShippingManagement.PackagingTest.PackagingTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.ShippingManagement.ShippingOriginTest.ShippingOriginTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.ShippingManagement.ShippingOriginTest.ShippingOriginTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.StoreManagement.StoreManagementTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.StoreManagement.StoreManagementTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.TaxManagement.ClassTest.ClassTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.TaxManagement.ClassTest.ClassTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.TaxManagement.RateTest.RateTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.TaxManagement.RateTest.RateTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.UserManagement.UserManagementTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerAdmin.TestCase.UserManagement.UserManagementTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerUser.TestCase.AccountTest.AccountTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerUser.TestCase.AccountTest.AccountTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerUser.TestCase.CartTest.CartTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerUser.TestCase.CartTest.CartTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerUser.TestCase.CheckoutTest.CheckoutTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerUser.TestCase.CheckoutTest.CheckoutTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerUser.TestCase.Login.LoginTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerUser.TestCase.Login.LoginTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerUser.TestCase.ProductInforTest.ProductInforTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerUser.TestCase.ProductInforTest.ProductInforTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerUser.TestCase.Register.RegisterTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-ShopizerUser.TestCase.Register.RegisterTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/All Test Suite/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/All Test Suite/classes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/All Test Suite/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/All Test Suite/methods-alphabetical.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/All Test Suite/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/All Test Suite/methods.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/All Test Suite/testng.xml.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/All Test Suite/testng.xml.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/All Test Suite/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/All Test Suite/toc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-output/testng.css" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +89,23 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.D:/Shopizer_test/shopizertest/testng.xml">
+    <configuration name="AccountTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="shopizertest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ShopizerUser.TestCase.AccountTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.AccountTest" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.AccountTest.AccountTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CustomerManagementTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="shopizertest" />
       <extension name="coverage">
@@ -66,52 +117,6 @@
       <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.CustomerManagement" />
       <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerManagementTest.EditCustomer" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shopizertest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ShopizerAdmin.TestCase.CustomerManagement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.CustomerManagement" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest" />
-      <option name="METHOD_NAME" value="EditCustomer" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerManagementTest.RemoveCustomer" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shopizertest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ShopizerAdmin.TestCase.CustomerManagement.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ShopizerAdmin.TestCase.CustomerManagement" />
-      <option name="MAIN_CLASS_NAME" value="ShopizerAdmin.TestCase.CustomerManagement.CustomerManagementTest" />
-      <option name="METHOD_NAME" value="RemoveCustomer" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="D:/Shopizer_test/shopizertest/runTest.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="shopizertest" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/runTest.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
@@ -138,20 +143,54 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RegisterTest.RegisterTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="shopizertest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ShopizerUser.TestCase.Register.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.Register" />
+      <option name="MAIN_CLASS_NAME" value="ShopizerUser.TestCase.Register.RegisterTest" />
+      <option name="METHOD_NAME" value="RegisterTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShopizerUser.TestCase.Register" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="shopizertest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ShopizerUser.TestCase.Register.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ShopizerUser.TestCase.Register" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="TestNG.AccountTest" />
+      <item itemvalue="TestNG.RegisterTest.RegisterTest" />
+      <item itemvalue="TestNG.ShopizerUser.TestCase.Register" />
       <item itemvalue="TestNG.CustomerManagementTest" />
-      <item itemvalue="TestNG.CustomerManagementTest.EditCustomer" />
-      <item itemvalue="TestNG.CustomerManagementTest.RemoveCustomer" />
-      <item itemvalue="TestNG.D:/Shopizer_test/shopizertest/runTest.xml" />
       <item itemvalue="TestNG.D:/Shopizer_test/shopizertest/testng.xml" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.D:/Shopizer_test/shopizertest/testng.xml" />
-        <item itemvalue="TestNG.D:/Shopizer_test/shopizertest/runTest.xml" />
+        <item itemvalue="TestNG.AccountTest" />
+        <item itemvalue="TestNG.RegisterTest.RegisterTest" />
+        <item itemvalue="TestNG.ShopizerUser.TestCase.Register" />
         <item itemvalue="TestNG.CustomerManagementTest" />
-        <item itemvalue="TestNG.CustomerManagementTest.RemoveCustomer" />
-        <item itemvalue="TestNG.CustomerManagementTest.EditCustomer" />
       </list>
     </recent_temporary>
   </component>
